@@ -42,7 +42,7 @@ nav a {
 
 .hero {
   background: url('https://source.unsplash.com/1600x600/?airport,transport') no-repeat center center/cover;
-  color: white;
+  color: black;
   padding: 100px 0;
   text-align: center;
 }
@@ -128,3 +128,4 @@ footer {
     width: 90%;
   }
 }
+
