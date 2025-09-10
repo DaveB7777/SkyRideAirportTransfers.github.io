@@ -19,40 +19,42 @@
     *{box-sizing:border-box}
     body{margin:0;background:linear-gradient(180deg,var(--blue-900),var(--blue-700));color:var(--blue-900)}
 
-    .container{max-width:980px;margin:48px auto;padding:0 20px}
+    .container{max-width:980px;margin:24px auto;padding:0 16px}
 
     .card{background:linear-gradient(180deg,rgba(255,255,255,0.98),#ffffff);border-radius:var(--card-radius);overflow:hidden;box-shadow:0 12px 30px rgba(2,6,23,0.35)}
 
-    header{display:flex;align-items:center;justify-content:space-between;padding:22px 28px;background:transparent}
-    .logo{display:flex;align-items:center;gap:12px;color:var(--white)}
-    .logo .mark{width:36px;height:36px;border-radius:8px;background:var(--white);display:flex;align-items:center;justify-content:center;font-weight:700;color:var(--blue-700)}
-    nav a{color:var(--white);text-decoration:none;margin-left:20px;font-weight:600;opacity:0.95}
+    header{display:flex;align-items:center;justify-content:space-between;padding:16px 20px;flex-wrap:wrap}
+    .logo{display:flex;align-items:center;gap:12px;margin-bottom:8px}
+    .logo .mark{width:32px;height:32px;border-radius:8px;background:var(--white);display:flex;align-items:center;justify-content:center;font-weight:700;color:var(--blue-700)}
+    nav{display:flex;flex-wrap:wrap;gap:12px}
+    nav a{color:var(--white);text-decoration:none;font-weight:600;opacity:0.95;font-size:15px}
 
     .hero{display:grid;grid-template-columns:1fr;align-items:center}
-    .hero-inner{display:flex;gap:32px;padding:40px 40px 28px}
+    .hero-inner{display:flex;flex-direction:column;gap:24px;padding:28px 20px}
 
-    .hero-left{flex:1}
-    h1{font-size:48px;line-height:1.02;margin:0;color:var(--blue-900)}
-    p.lead{color:var(--muted);margin:18px 0 22px;max-width:52ch}
+    .hero-left{flex:1;text-align:center}
+    h1{font-size:32px;line-height:1.2;margin:0;color:var(--blue-900)}
+    p.lead{color:var(--muted);margin:16px 0 20px;max-width:52ch;margin-left:auto;margin-right:auto}
 
-    .cta{display:inline-block;color:var(--white);padding:14px 20px;border-radius:10px;font-weight:700;text-decoration:none;margin-right:10px}
+    .cta{display:inline-block;color:var(--white);padding:12px 18px;border-radius:10px;font-weight:700;text-decoration:none;margin:6px}
     .cta.call{background:var(--blue-500)}
     .cta.whatsapp{background:var(--green-500)}
 
-    .hero-image{flex:1;min-height:320px;background-image:url('/mnt/data/A_website_homepage_for_an_airport_transfer_service.png');background-size:cover;background-position:center;border-radius:12px}
+    .hero-image{flex:1;width:100%;height:220px;background-image:url('/mnt/data/A_website_homepage_for_an_airport_transfer_service.png');background-size:cover;background-position:center;border-radius:12px}
 
-    .features{display:flex;justify-content:space-between;padding:26px 40px 40px}
-    .feature{flex:1;text-align:center;padding:8px 18px}
+    .features{display:flex;flex-direction:column;gap:20px;padding:20px}
+    .feature{text-align:center;padding:12px 8px}
     .feature h3{margin:8px 0 6px;font-size:16px;color:var(--blue-900)}
     .feature p{margin:0;color:var(--muted);font-size:14px}
 
-    /* Responsive */
-    @media (max-width:900px){
-      h1{font-size:36px}
-      .hero-inner{flex-direction:column}
-      .hero-image{width:100%;height:260px}
-      .features{flex-direction:column;gap:12px}
-      .feature{padding:14px 6px}
+    /* Larger screens */
+    @media (min-width:768px){
+      .hero-inner{flex-direction:row;padding:40px}
+      .hero-left{text-align:left}
+      h1{font-size:44px}
+      .hero-image{height:320px}
+      .features{flex-direction:row;justify-content:space-between}
+      .feature{flex:1}
     }
   </style>
 </head>
@@ -62,7 +64,7 @@
       <header>
         <div class="logo">
           <div class="mark">✈️</div>
-          <div style="color:var(--blue-900);font-weight:800;font-size:18px">FlyNow Transfers</div>
+          <div style="color:var(--blue-900);font-weight:800;font-size:18px">Airport Transfer</div>
         </div>
         <nav>
           <a href="#">Home</a>
@@ -77,8 +79,8 @@
           <div class="hero-left">
             <h1>Trusted Airport Transfer Service</h1>
             <p class="lead">Professional drivers, on-time pick-ups and comfortable vehicles — book your ride to or from the airport in seconds.</p>
-            <a class="cta call" href="tel:+07591261537">Call now</a>
-            <a class="cta whatsapp" href="https://wa.me/07591261537" target="_blank">WhatsApp Us</a>
+            <a class="cta call" href="tel:+1234567890">Call now</a>
+            <a class="cta whatsapp" href="https://wa.me/1234567890" target="_blank">WhatsApp Us</a>
           </div>
           <div class="hero-image" role="img" aria-label="Car on tarmac with airplane taking off"></div>
         </div>
