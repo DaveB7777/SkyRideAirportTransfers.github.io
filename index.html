@@ -1,93 +1,107 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>SkyRide Airport Transfers</title>
-  <link rel="stylesheet" href="style.css"/>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Airport Transfer — Landing</title>
+  <style>
+    :root{
+      --blue-900:#083463;
+      --blue-700:#0b4f80;
+      --blue-500:#1f73b7;
+      --green-500:#25D366;
+      --white:#ffffff;
+      --muted:#6b7280;
+      --card-radius:18px;
+      --gap:24px;
+      font-family: Inter, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
+    }
+    *{box-sizing:border-box}
+    body{margin:0;background:linear-gradient(180deg,var(--blue-900),var(--blue-700));color:var(--blue-900)}
+
+    .container{max-width:980px;margin:48px auto;padding:0 20px}
+
+    .card{background:linear-gradient(180deg,rgba(255,255,255,0.98),#ffffff);border-radius:var(--card-radius);overflow:hidden;box-shadow:0 12px 30px rgba(2,6,23,0.35)}
+
+    header{display:flex;align-items:center;justify-content:space-between;padding:22px 28px;background:transparent}
+    .logo{display:flex;align-items:center;gap:12px;color:var(--white)}
+    .logo .mark{width:36px;height:36px;border-radius:8px;background:var(--white);display:flex;align-items:center;justify-content:center;font-weight:700;color:var(--blue-700)}
+    nav a{color:var(--white);text-decoration:none;margin-left:20px;font-weight:600;opacity:0.95}
+
+    .hero{display:grid;grid-template-columns:1fr;align-items:center}
+    .hero-inner{display:flex;gap:32px;padding:40px 40px 28px}
+
+    .hero-left{flex:1}
+    h1{font-size:48px;line-height:1.02;margin:0;color:var(--blue-900)}
+    p.lead{color:var(--muted);margin:18px 0 22px;max-width:52ch}
+
+    .cta{display:inline-block;color:var(--white);padding:14px 20px;border-radius:10px;font-weight:700;text-decoration:none;margin-right:10px}
+    .cta.call{background:var(--blue-500)}
+    .cta.whatsapp{background:var(--green-500)}
+
+    .hero-image{flex:1;min-height:320px;background-image:url('/mnt/data/A_website_homepage_for_an_airport_transfer_service.png');background-size:cover;background-position:center;border-radius:12px}
+
+    .features{display:flex;justify-content:space-between;padding:26px 40px 40px}
+    .feature{flex:1;text-align:center;padding:8px 18px}
+    .feature h3{margin:8px 0 6px;font-size:16px;color:var(--blue-900)}
+    .feature p{margin:0;color:var(--muted);font-size:14px}
+
+    /* Responsive */
+    @media (max-width:900px){
+      h1{font-size:36px}
+      .hero-inner{flex-direction:column}
+      .hero-image{width:100%;height:260px}
+      .features{flex-direction:column;gap:12px}
+      .feature{padding:14px 6px}
+    }
+  </style>
 </head>
 <body>
-
-  <header>
-    <div class="container">
-      <h1>Sky Ride Airport Transfers</h1>
-      <nav>
-        <a href="#services">Services</a>
-        <a href="#about">About</a>
-        <a href="#booking">Book Now</a>
-        <a href="#contact">Contact</a>
-      </nav>
-    </div>
-  </header>
-
-  <section class="hero">
-    <div class="container">
-      <h2>Reliable Airport Transfers</h2>
-      <p>On-time. Comfortable. 24/7 Service.</p>
-      <a href="#booking" class="btn">Book Your Ride</a>
-    </div>
-  </section>
-
-  <section id="services" class="services">
-    <div class="container">
-      <h2>Our Services</h2>
-      <div class="service-list">
-        <div class="service-item">
-          <h3>Airport Pickups</h3>
-          <p>Meet and greet at any airport, always on time.</p>
+  <div class="container">
+    <div class="card">
+      <header>
+        <div class="logo">
+          <div class="mark">✈️</div>
+          <div style="color:var(--blue-900);font-weight:800;font-size:18px">FlyNow Transfers</div>
         </div>
-        <div class="service-item">
-          <h3>Private Transfers</h3>
-          <p>Direct, private rides in clean, comfortable vehicles.</p>
+        <nav>
+          <a href="#">Home</a>
+          <a href="#about">About</a>
+          <a href="#services">Services</a>
+          <a href="#contact">Contact</a>
+        </nav>
+      </header>
+
+      <section class="hero">
+        <div class="hero-inner">
+          <div class="hero-left">
+            <h1>Trusted Airport Transfer Service</h1>
+            <p class="lead">Professional drivers, on-time pick-ups and comfortable vehicles — book your ride to or from the airport in seconds.</p>
+            <a class="cta call" href="tel:+07591261537">Call now</a>
+            <a class="cta whatsapp" href="https://wa.me/07591261537" target="_blank">WhatsApp Us</a>
+          </div>
+          <div class="hero-image" role="img" aria-label="Car on tarmac with airplane taking off"></div>
         </div>
-        <div class="service-item">
-          <h3>Group Transport</h3>
-          <p>Shuttles and vans for larger parties and events.</p>
+
+        <div class="features">
+          <div class="feature">
+            <div style="font-size:28px;margin-bottom:8px">⏰</div>
+            <h3>On-time service</h3>
+            <p>Punctual pickups and real-time flight tracking so you never wait.</p>
+          </div>
+          <div class="feature">
+            <div style="font-size:28px;margin-bottom:8px">📍</div>
+            <h3>Convenient locations</h3>
+            <p>Pickup and drop-off at all major terminals and hotels.</p>
+          </div>
+          <div class="feature">
+            <div style="font-size:28px;margin-bottom:8px">👔</div>
+            <h3>Professional drivers</h3>
+            <p>Experienced, vetted drivers with high-standards of service.</p>
+          </div>
         </div>
-      </div>
+      </section>
     </div>
-  </section>
-
-  <section id="about" class="about">
-    <div class="container">
-      <h2>About Us</h2>
-      <p>At SkyRide, we specialize in stress-free airport transfers with professional drivers and 24/7 availability. Whether you're traveling solo or in a group, we get you there safely and comfortably.</p>
-    </div>
-  </section>
-
-  <section id="booking" class="booking">
-    <div class="container">
-      <h2>Book a Transfer</h2>
-      <form action="#" method="post">
-        <label for="name">Full Name</label>
-        <input type="text" id="name" required>
-
-        <label for="email">Email</label>
-        <input type="email" id="email" required>
-
-        <label for="pickup">Pickup Location</label>
-        <input type="text" id="pickup" required>
-
-        <label for="dropoff">Dropoff Location</label>
-        <input type="text" id="dropoff" required>
-
-        <label for="date">Date & Time</label>
-        <input type="datetime-local" id="date" required>
-
-        <button type="submit" class="btn">Submit Booking</button>
-      </form>
-    </div>
-  </section>
-
-  <footer id="contact">
-    <div class="container">
-      <p>📍 London, UK | 📞 +44 1234 567890 | ✉️ info@skyride.com</p>
-      <p>&copy; 2025 SkyRide Airport Transfers</p>
-    </div>
-  </footer>
-
+  </div>
 </body>
 </html>
-
-
-
