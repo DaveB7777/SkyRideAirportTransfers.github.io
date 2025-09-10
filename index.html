@@ -1,113 +1,218 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width,initial-scale=1">
-  <title>Airport Transfer — Landing</title>
-  <style>
-    :root{
-      --blue-900:#083463;
-      --blue-700:#0b4f80;
-      --blue-500:#1f73b7;
-      --green-500:#25D366;
-      --white:#ffffff;
-      --muted:#6b7280;
-      --card-radius:18px;
-      --gap:24px;
-      font-family: Inter, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
-    }
-    *{box-sizing:border-box}
-    body{margin:0;background:linear-gradient(180deg,var(--blue-900),var(--blue-700));color:var(--blue-900)}
-
-    .container{max-width:980px;margin:24px auto;padding:0 16px}
-
-    .card{background:linear-gradient(180deg,rgba(255,255,255,0.98),#ffffff);border-radius:var(--card-radius);overflow:hidden;box-shadow:0 12px 30px rgba(2,6,23,0.35)}
-
-    header{display:flex;align-items:center;justify-content:space-between;padding:16px 20px;flex-wrap:wrap}
-    .logo{display:flex;align-items:center;gap:12px;margin-bottom:8px}
-    .logo .mark{width:32px;height:32px;border-radius:8px;background:var(--white);display:flex;align-items:center;justify-content:center;font-weight:700;color:var(--blue-700)}
-    nav{display:flex;flex-wrap:wrap;gap:12px}
-    nav a{color:var(--white);text-decoration:none;font-weight:600;opacity:0.95;font-size:15px}
-
-    .hero{display:grid;grid-template-columns:1fr;align-items:center}
-    .hero-inner{display:flex;flex-direction:column;gap:24px;padding:28px 20px}
-
-    .hero-left{flex:1;text-align:center}
-    h1{font-size:32px;line-height:1.2;margin:0;color:var(--blue-900)}
-    p.lead{color:var(--muted);margin:16px 0 20px;max-width:52ch;margin-left:auto;margin-right:auto}
-
-    .cta{display:inline-block;color:var(--white);padding:12px 18px;border-radius:10px;font-weight:700;text-decoration:none;margin:6px}
-    .cta.call{background:var(--blue-500)}
-    .cta.whatsapp{background:var(--green-500)}
-
-    .hero-image{flex:1;width:100%;height:220px;background-image:url('/mnt/data/A_website_homepage_for_an_airport_transfer_service.png');background-size:cover;background-position:center;border-radius:12px}
-
-    .features{display:flex;flex-direction:column;gap:20px;padding:20px}
-    .feature{text-align:center;padding:12px 8px}
-    .feature h3{margin:8px 0 6px;font-size:16px;color:var(--blue-900)}
-    .feature p{margin:0;color:var(--muted);font-size:14px}
-
-    /* Larger screens */
-    @media (min-width:768px){
-      .hero-inner{flex-direction:row;padding:40px}
-      .hero-left{text-align:left}
-      h1{font-size:44px}
-      .hero-image{height:320px}
-      .features{flex-direction:row;justify-content:space-between}
-      .feature{flex:1}
-    }
-  </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AeroRide - Airport Transfers</title>
+  <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body>
-  <div class="container">
-    <div class="card">
-      <header>
-        <div class="logo">
-          <div class="mark">✈️</div>
-          <div style="color:var(--blue-900);font-weight:800;font-size:18px">Airport Transfer</div>
-        </div>
-        <nav>
-          <a href="#">Home</a>
-          <a href="#about">About</a>
-          <a href="#services">Services</a>
-          <a href="#contact">Contact</a>
-        </nav>
-      </header>
-
-      <section class="hero">
-        <div class="hero-inner">
-          <div class="hero-left">
-            <h1>Trusted Airport Transfer Service</h1>
-            <p class="lead">Professional drivers, on-time pick-ups and comfortable vehicles — book your ride to or from the airport in seconds.</p>
-            <a class="cta call" href="tel:447591261537">Call now</a>
-            <a class="cta whatsapp" href="https://wa.me/07591261537" target="_blank">WhatsApp Us</a>
-          </div>
-          <div class="hero-image" role="img" aria-label="Car on tarmac with airplane taking off"></div>
-        </div>
-
-        <div class="features">
-          <div class="feature">
-            <div style="font-size:28px;margin-bottom:8px">⏰</div>
-            <h3>On-time service</h3>
-            <p>Punctual pickups and real-time flight tracking so you never wait.</p>
-          </div>
-          <div class="feature">
-            <div style="font-size:28px;margin-bottom:8px">📍</div>
-            <h3>Convenient locations</h3>
-            <p>Pickup and drop-off at all major terminals and hotels.</p>
-          </div>
-          <div class="feature">
-            <div style="font-size:28px;margin-bottom:8px">👔</div>
-            <h3>Professional drivers</h3>
-            <p>Experienced, vetted drivers with high-standards of service.</p>
+<body class="min-h-screen font-sans text-gray-800 bg-gray-50">
+  <header class="bg-white shadow sticky top-0 z-40">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex justify-between items-center h-16">
+        <div class="flex items-center space-x-3">
+          <div class="text-2xl font-extrabold text-indigo-600">AeroRide</div>
+          <div class="hidden md:flex items-center space-x-6 text-sm text-gray-600">
+            <a href="#home" class="hover:text-indigo-600">Home</a>
+            <a href="#services" class="hover:text-indigo-600">Services</a>
+            <a href="#fleet" class="hover:text-indigo-600">Fleet</a>
+            <a href="#booking" class="hover:text-indigo-600">Booking</a>
+            <a href="#contact" class="hover:text-indigo-600">Contact</a>
           </div>
         </div>
-      </section>
+        <div class="flex items-center space-x-3">
+          <a id="wa-link" target="_blank" rel="noreferrer"
+             class="inline-flex items-center px-4 py-2 bg-green-500 text-white rounded-lg text-sm shadow hover:bg-green-600">
+            WhatsApp
+          </a>
+        </div>
+      </div>
     </div>
+  </header>
+
+  <!-- HERO -->
+  <section id="home" class="bg-gradient-to-r from-indigo-600 to-indigo-500 text-white py-20">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col lg:flex-row items-center gap-10">
+      <div class="w-full lg:w-1/2">
+        <h1 class="text-4xl md:text-5xl font-extrabold leading-tight">Reliable airport transfers — on time, every time</h1>
+        <p class="mt-4 text-lg opacity-90">Private cars, professional drivers, flight monitoring and door-to-door service. Book in seconds via WhatsApp.</p>
+        <div class="mt-6 flex items-center gap-4">
+          <a href="#booking" class="px-6 py-3 bg-white text-indigo-600 rounded-lg font-semibold shadow hover:opacity-95">Book Now</a>
+          <a id="hero-wa" target="_blank" rel="noreferrer" class="px-4 py-3 border border-white rounded-lg">Message Us</a>
+        </div>
+        <div class="mt-6 grid grid-cols-2 gap-3 text-sm">
+          <div class="bg-white/10 rounded p-3">Flight monitoring</div>
+          <div class="bg-white/10 rounded p-3">Fixed fares</div>
+          <div class="bg-white/10 rounded p-3">24/7 support</div>
+        </div>
+      </div>
+
+      <div class="w-full lg:w-1/2">
+        <div class="rounded-xl overflow-hidden shadow-lg bg-white">
+          <img src="images/hero.jpg" alt="airport transfer" class="w-full h-64 object-cover" />
+          <div class="p-6">
+            <h3 class="text-lg font-semibold">Door-to-door transfers</h3>
+            <p class="mt-2 text-sm text-gray-600">Comfortable vehicles, punctual drivers, and easy communication through WhatsApp for every booking.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SERVICES -->
+  <section id="services" class="py-16">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+      <h2 class="text-2xl font-bold mb-6">Our Services</h2>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+        <div class="p-6 bg-white rounded-lg shadow">
+          <h4 class="font-semibold">Airport Transfers</h4>
+          <p class="mt-3 text-sm text-gray-600">Pickup or dropoff at any airport. Flight tracking included — no extra charge for delays.</p>
+        </div>
+        <div class="p-6 bg-white rounded-lg shadow">
+          <h4 class="font-semibold">Private Rides</h4>
+          <p class="mt-3 text-sm text-gray-600">Private cars for individuals or families — comfortable and discreet.</p>
+        </div>
+        <div class="p-6 bg-white rounded-lg shadow">
+          <h4 class="font-semibold">Corporate Travel</h4>
+          <p class="mt-3 text-sm text-gray-600">Business accounts and invoicing available. Book recurring transfers easily.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FLEET -->
+  <section id="fleet" class="py-16 bg-gray-100">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+      <h2 class="text-2xl font-bold mb-6">Our Fleet</h2>
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div class="bg-white rounded-lg overflow-hidden shadow">
+          <img src="images/sedan.jpg" alt="Executive Sedan" class="w-full h-44 object-cover" />
+          <div class="p-4">
+            <h4 class="font-semibold">Executive Sedan</h4>
+            <p class="text-sm text-gray-600 mt-2">Seats up to 3 passengers • Spacious luggage space</p>
+          </div>
+        </div>
+        <div class="bg-white rounded-lg overflow-hidden shadow">
+          <img src="images/suv.jpg" alt="Luxury SUV" class="w-full h-44 object-cover" />
+          <div class="p-4">
+            <h4 class="font-semibold">Luxury SUV</h4>
+            <p class="text-sm text-gray-600 mt-2">Seats up to 5 passengers • Premium comfort</p>
+          </div>
+        </div>
+        <div class="bg-white rounded-lg overflow-hidden shadow">
+          <img src="images/minivan.jpg" alt="Minivan" class="w-full h-44 object-cover" />
+          <div class="p-4">
+            <h4 class="font-semibold">Minivan</h4>
+            <p class="text-sm text-gray-600 mt-2">Seats up to 7 passengers • Ideal for families</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- BOOKING -->
+  <section id="booking" class="py-16">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <h2 class="text-2xl font-bold mb-4">Book your transfer (via WhatsApp)</h2>
+      <p class="text-sm text-gray-600 mb-6">Fill the details and we'll open WhatsApp with a ready-made message.</p>
+
+      <form id="bookingForm" class="bg-white p-6 rounded-lg shadow">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+          <input required name="name" placeholder="Full name" class="p-3 border rounded" />
+          <input required name="phone" placeholder="Contact phone" class="p-3 border rounded" />
+          <input required name="pickup" placeholder="Pickup address / Airport" class="p-3 border rounded md:col-span-2" />
+          <input required name="dropoff" placeholder="Drop-off address / Hotel" class="p-3 border rounded md:col-span-2" />
+          <input required type="date" name="date" class="p-3 border rounded" />
+          <input required type="time" name="time" class="p-3 border rounded" />
+          <input required type="number" min="1" name="passengers" placeholder="Passengers" class="p-3 border rounded" />
+          <input name="flight" placeholder="Flight number (optional)" class="p-3 border rounded" />
+          <textarea name="notes" placeholder="Additional notes (optional)" class="p-3 border rounded md:col-span-2" rows="3"></textarea>
+        </div>
+
+        <div class="mt-4 flex items-center gap-3">
+          <button type="submit" class="px-5 py-3 bg-indigo-600 text-white rounded-lg font-semibold">Send via WhatsApp</button>
+          <button type="reset" class="px-4 py-2 border rounded">Clear</button>
+        </div>
+
+        <p class="text-xs text-gray-500 mt-3">By sending a WhatsApp message you agree to share these details with AeroRide for booking and communication.</p>
+      </form>
+    </div>
+  </section>
+
+  <!-- TESTIMONIALS -->
+  <section id="testimonials" class="py-16 bg-gradient-to-r from-white to-gray-50">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+      <h2 class="text-2xl font-bold mb-6">What customers say</h2>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+        <div class="p-4 bg-white rounded shadow">
+          <p class="text-sm">"Driver was on time and very friendly. Smooth trip to the hotel."</p>
+          <div class="mt-3 text-xs text-gray-500">— Sarah L.</div>
+        </div>
+        <div class="p-4 bg-white rounded shadow">
+          <p class="text-sm">"Great service. Flight was delayed and they were waiting when we landed."</p>
+          <div class="mt-3 text-xs text-gray-500">— Mark D.</div>
+        </div>
+        <div class="p-4 bg-white rounded shadow">
+          <p class="text-sm">"Easy booking via WhatsApp and clear pricing. Highly recommended."</p>
+          <div class="mt-3 text-xs text-gray-500">— Anna P.</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact" class="py-16">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 lg:grid-cols-2 gap-8">
+      <div>
+        <h3 class="text-xl font-bold">Contact Us</h3>
+        <p class="mt-3 text-sm text-gray-600">Phone / WhatsApp: <a id="contact-wa" class="text-green-600"></a></p>
+        <p class="mt-2 text-sm text-gray-600">Email: <a href="mailto:info@aeroride.example" class="text-indigo-600">info@aeroride.example</a></p>
+        <p class="mt-2 text-sm text-gray-600">Address: Sample Street 12, City</p>
+        <div class="mt-4">
+          <a id="contact-wa-btn" target="_blank" rel="noreferrer" class="inline-flex items-center px-4 py-2 bg-green-500 text-white rounded-lg">Message on WhatsApp</a>
+        </div>
+      </div>
+
+      <div>
+        <h3 class="text-xl font-bold">Location</h3>
+        <div class="mt-3 rounded overflow-hidden shadow">
+          <iframe title="map" class="w-full h-60 border-0"
+                  src="https://www.google.com/maps?q=airport&output=embed"></iframe>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="bg-white border-t py-6">
+  <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-center text-sm text-gray-600">
+    © <span id="year"></span> AeroRide. All rights reserved.
   </div>
+</footer>
+
+  <script>
+    const WA_PHONE = "447700900123";
+    document.getElementById("wa-link").href = `https://wa.me/${WA_PHONE}`;
+    document.getElementById("hero-wa").href = `https://wa.me/${WA_PHONE}?text=${encodeURIComponent("Hello! I would like to book an airport transfer.")}`;
+    document.getElementById("contact-wa").textContent = "+" + WA_PHONE;
+    document.getElementById("contact-wa").href = `https://wa.me/${WA_PHONE}`;
+    document.getElementById("contact-wa-btn").href = `https://wa.me/${WA_PHONE}`;
+    document.getElementById("bookingForm").addEventListener("submit", function (e) {
+      e.preventDefault();
+      const form = Object.fromEntries(new FormData(this).entries());
+      const message = `Booking request from *${form.name || "Guest"}*\n` +
+        `Phone: ${form.phone || "N/A"}\n` +
+        `Pickup: ${form.pickup}\n` +
+        `Dropoff: ${form.dropoff}\n` +
+        `Date: ${form.date} ${form.time}\n` +
+        `Passengers: ${form.passengers}\n` +
+        (form.flight ? `Flight: ${form.flight}\n` : "") +
+        (form.notes ? `Notes: ${form.notes}\n` : "") +
+        `\nPlease confirm availability and price.`;
+      const url = `https://wa.me/${WA_PHONE}?text=${encodeURIComponent(message)}`;
+      window.open(url, "_blank");
+    });
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
 </body>
 </html>
-
-
-
-
