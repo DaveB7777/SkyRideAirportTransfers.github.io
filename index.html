@@ -88,22 +88,25 @@
       <p class="mt-4 text-lg opacity-90 leading-relaxed">
         Private cars, professional drivers, flight monitoring and door-to-door service. Book in seconds via phone or WhatsApp.
       </p>
+
       <div class="mt-6 flex flex-col sm:flex-row items-center gap-3 sm:gap-4 justify-center lg:justify-start">
         <a href="#booking" class="w-full sm:w-auto px-6 py-3 bg-white text-indigo-600 rounded-lg font-semibold shadow hover:opacity-95 text-center">Book Now</a>
         <a id="hero-wa" target="_blank" rel="noreferrer" class="w-full sm:w-auto px-4 py-3 border border-white rounded-lg text-center">Message Us</a>
       </div>
+
       <div class="mt-6 grid grid-cols-2 sm:grid-cols-3 gap-3 text-sm text-center sm:text-left justify-center lg:justify-start">
         <div class="bg-white/10 rounded p-3">Flight monitoring</div>
         <div class="bg-white/10 rounded p-3">Fixed fares</div>
         <div class="bg-white/10 rounded p-3">24/7 support</div>
+	    <div class="bg-white/10 rounded p-3">Card payments</div>
       </div>
     </div>
 
     <!-- Image Content (Hidden on Mobile) -->
-    <div class="w-full lg:w-1/2 mt-8 lg:mt-0">
+    <div class="w-full lg:w-1/2 mt-8 lg:mt-0 hidden sm:block">
       <div class="rounded-xl overflow-hidden shadow-lg bg-white">
         <img src="images/hero.jpg" alt="airport transfer" 
-             class="hidden sm:block w-full h-64 sm:h-80 md:h-96 object-cover" loading="lazy" />
+             class="w-full h-64 sm:h-80 md:h-96 object-cover" loading="lazy" />
         <div class="p-6">
           <h3 class="text-lg font-semibold">Door-to-door transfers</h3>
           <p class="mt-2 text-sm text-gray-600 leading-relaxed">
@@ -138,41 +141,47 @@
   </section>
 
   <!-- FLEET -->
-<!-- <section id="fleet" class="py-16 bg-gray-100">
+<section id="fleet" class="py-16 bg-gray-100">
   <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-    <h2 class="text-2xl font-bold mb-6">Our Fleet</h2>
+    <h2 class="text-2xl font-bold mb-6 text-center lg:text-left">Our Fleet</h2>
+
     <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
 
-      <div class="bg-white rounded-lg overflow-hidden shadow">
+      <!-- Executive Sedan -->
+      <div class="bg-white rounded-lg overflow-hidden shadow p-4 flex flex-col items-center sm:items-start">
+        <!-- Image hidden on mobile -->
         <img src="images/sedan.jpg" alt="Executive Sedan" 
-             class="hidden sm:block w-full h-44 object-cover" />
-        <div class="p-4">
-          <h4 class="font-semibold">Executive Sedan</h4>
-          <p class="text-sm text-gray-600 mt-2">Seats up to 3 passengers • Spacious luggage space</p>
-        </div>
+             class="hidden sm:block w-full h-44 object-cover rounded" />
+        <h4 class="font-semibold mt-3 text-center sm:text-left">Executive Sedan</h4>
+        <p class="text-sm text-gray-600 mt-1 text-center sm:text-left">
+          Seats up to 3 passengers • Spacious luggage space
+        </p>
       </div>
 
-      <div class="bg-white rounded-lg overflow-hidden shadow">
+      <!-- Luxury SUV -->
+      <div class="bg-white rounded-lg overflow-hidden shadow p-4 flex flex-col items-center sm:items-start">
         <img src="images/suv.jpg" alt="Luxury SUV" 
-             class="hidden sm:block w-full h-44 object-cover" />
-        <div class="p-4">
-          <h4 class="font-semibold">Luxury SUV</h4>
-          <p class="text-sm text-gray-600 mt-2">Seats up to 5 passengers • Premium comfort</p>
-        </div>
+             class="hidden sm:block w-full h-44 object-cover rounded" />
+        <h4 class="font-semibold mt-3 text-center sm:text-left">Luxury SUV</h4>
+        <p class="text-sm text-gray-600 mt-1 text-center sm:text-left">
+          Seats up to 5 passengers • Premium comfort
+        </p>
       </div>
 
-      <div class="bg-white rounded-lg overflow-hidden shadow">
+      <!-- Minivan -->
+      <div class="bg-white rounded-lg overflow-hidden shadow p-4 flex flex-col items-center sm:items-start">
         <img src="images/minivan.jpg" alt="Minivan" 
-             class="hidden sm:block w-full h-44 object-cover" />
-        <div class="p-4">
-          <h4 class="font-semibold">Minivan</h4>
-          <p class="text-sm text-gray-600 mt-2">Seats up to 7 passengers • Ideal for families</p>
-        </div>
+             class="hidden sm:block w-full h-44 object-cover rounded" />
+        <h4 class="font-semibold mt-3 text-center sm:text-left">Minivan</h4>
+        <p class="text-sm text-gray-600 mt-1 text-center sm:text-left">
+          Seats up to 7 passengers • Ideal for families
+        </p>
       </div>
 
     </div>
   </div>
-</section> -->
+</section>
+
 
   <!-- BOOKING -->
   <section id="booking" class="py-16">
