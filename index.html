@@ -84,8 +84,9 @@
    id="floating-call-btn"
    class="relative fixed bottom-4 right-4 w-16 h-16 flex items-center justify-center text-2xl rounded-full md:hidden bg-gradient-to-r from-orange-500 to-orange-600 text-white shadow-xl hover:scale-110 transition-transform duration-300 z-50">
    📞
-   <!-- Expanding ring -->
-   <span class="absolute w-16 h-16 rounded-full bg-orange-400 opacity-30 animate-ring"></span>
+   <!-- Expanding rings -->
+   <span class="absolute w-16 h-16 rounded-full bg-orange-400 opacity-30 animate-ring ring-delay-0"></span>
+   <span class="absolute w-16 h-16 rounded-full bg-orange-400 opacity-30 animate-ring ring-delay-1"></span>
 </a>
 
 <style>
@@ -109,8 +110,20 @@
   animation: ring 1.5s infinite;
   pointer-events: none;
   z-index: -1;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.ring-delay-0 {
+  animation-delay: 0s;
+}
+
+.ring-delay-1 {
+  animation-delay: 0.75s; /* half of the animation duration to offset */
 }
 </style>
+
 
 
   <!-- HERO SECTION -->
