@@ -7,14 +7,11 @@
   <script src="https://cdn.tailwindcss.com"></script>
 
   <style>
-    html {
-      scroll-behavior: smooth;
-    }
     .brand-btn {
       @apply bg-blue-900 text-white rounded-lg shadow hover:bg-blue-950 transition-colors duration-300;
     }
     .wa-btn {
-      @apply bg-green-600 text-white rounded-lg shadow hover:bg-green-700 transition-colors duration-300;
+      @apply bg-green-600 rounded-lg shadow hover:bg-green-700 transition-colors duration-300;
     }
     .secondary-btn {
       @apply border border-gray-300 bg-white text-gray-700 rounded-lg hover:bg-gray-50 transition-colors duration-300;
@@ -39,8 +36,8 @@
         </div>
 
         <div class="flex items-center space-x-3">
-          <a id="email-link" class="hidden md:inline-flex items-center px-4 py-2 text-sm brand-btn">Email Us</a>
-          <a id="wa-link" class="hidden md:inline-flex items-center px-4 py-2 text-sm wa-btn">WhatsApp</a>
+          <a href="#booking" class="hidden md:inline-flex items-center px-4 py-2 text-sm brand-btn">Email Us</a>
+          <a href="#booking" class="hidden md:inline-flex items-center px-4 py-2 text-sm wa-btn text-[#25D366]">WhatsApp</a>
           <div class="md:hidden">
             <button id="mobile-menu-btn" class="p-2 rounded-md hover:bg-gray-100">
               <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -59,9 +56,9 @@
       <a href="#fleet" class="hover:text-blue-900">Fleet</a>
       <a href="#booking" class="hover:text-blue-900">Booking</a>
       <a href="#contact" class="hover:text-blue-900">Contact</a>
-      <a id="email-link-mobile" class="px-4 py-2 w-3/4 text-center brand-btn">Email Us</a>
-      <a id="wa-link-mobile" class="px-4 py-2 w-3/4 text-center wa-btn">WhatsApp</a>
-      <a href="tel:+447594261537" class="px-4 py-2 w-3/4 text-center bg-yellow-500 text-white rounded-lg hover:bg-yellow-600 transition">Call Now</a>
+      <a href="#booking" class="px-4 py-2 w-3/4 text-center brand-btn">Email Us</a>
+      <a href="#booking" class="px-4 py-2 w-3/4 text-center wa-btn text-[#25D366]">WhatsApp</a>
+      <a href="tel:+447594261537" class="px-4 py-2 w-3/4 text-center bg-yellow-500 text-white rounded-lg shadow hover:bg-yellow-600">Call Now</a>
     </div>
   </header>
 
@@ -71,80 +68,74 @@
     📞
   </a>
 
-  <!-- HERO SECTION -->
-  <section id="home" class="relative bg-transparent">
-    <picture class="absolute inset-0 -z-10">
-      <!-- WebP (preferred) -->
-      <source type="image/webp"
-              srcset="images/hero-vito-dusk-1280.webp 1280w,
-                      images/hero-vito-dusk-1920.webp 1920w,
-                      images/hero-vito-dusk-2560.webp 2560w,
-                      images/hero-vito-dusk-3200.webp 3200w"
-              sizes="100vw" />
-      <!-- JPG fallback -->
-      <img src="images/hero-vito-dusk-1920.jpg"
-           srcset="images/hero-vito-dusk-1280.jpg 1280w,
-                   images/hero-vito-dusk-1920.jpg 1920w,
-                   images/hero-vito-dusk-2560.jpg 2560w,
-                   images/hero-vito-dusk-3200.jpg 3200w"
-           sizes="100vw"
-           alt="Black Mercedes Vito Tourer at airport"
-           loading="eager" fetchpriority="high"
-           class="w-full h-full object-cover object-[70%_65%]" />
-    </picture>
+<!-- HERO SECTION -->
+<section id="home" class="relative bg-transparent">
+  <picture class="absolute inset-0 -z-10">
+    <source type="image/webp"
+            srcset="images/hero-vito-dusk-1280.webp 1280w,
+                    images/hero-vito-dusk-1920.webp 1920w,
+                    images/hero-vito-dusk-2560.webp 2560w,
+                    images/hero-vito-dusk-3200.webp 3200w"
+            sizes="100vw" />
+    <img src="images/hero-vito-dusk-1920.jpg"
+         srcset="images/hero-vito-dusk-1280.jpg 1280w,
+                 images/hero-vito-dusk-1920.jpg 1920w,
+                 images/hero-vito-dusk-2560.jpg 2560w,
+                 images/hero-vito-dusk-3200.jpg 3200w"
+         sizes="100vw"
+         alt="Black Mercedes Vito Tourer at airport"
+         loading="eager" fetchpriority="high"
+         class="w-full h-full object-cover object-[70%_65%]" />
+  </picture>
 
-    <!-- Overlay -->
-    <div class="absolute inset-0 bg-black/40 -z-0"></div>
+  <div class="absolute inset-0 bg-black/40 -z-0"></div>
 
-    <!-- Content -->
-    <div class="relative max-w-4xl mx-auto px-4 sm:px-6 lg:px-8
-                min-h-[75svh] md:min-h-[85svh] flex flex-col items-center justify-center text-center space-y-6">
+  <div class="relative max-w-4xl mx-auto px-4 sm:px-6 lg:px-8
+              min-h-[75svh] md:min-h-[85svh] flex flex-col items-center justify-center text-center space-y-6">
 
-      <h1 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-white">
-        Reliable Airport Transfers — On Time, Every Time
-      </h1>
+    <h1 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-white">
+      Reliable Airport Transfers — On Time, Every Time
+    </h1>
 
-      <p class="text-lg text-gray-100 max-w-2xl">
-        Private cars, professional drivers, flight monitoring and door-to-door service.
-      </p>
+    <p class="text-lg text-gray-100 max-w-2xl">
+      Private cars, professional drivers, flight monitoring and door-to-door service.
+    </p>
 
-      <p class="text-md text-gray-200 max-w-xl">
-        Book in seconds via phone, WhatsApp, or email.
-      </p>
+    <p class="text-md text-gray-200 max-w-xl">
+      Book in seconds via phone, WhatsApp, or email.
+    </p>
 
-      <!-- Buttons -->
-      <div class="flex flex-col sm:flex-row gap-4 mt-6">
-        <a href="#booking"
-           id="hero-wa"
-           class="px-8 py-4 wa-btn text-lg font-semibold text-center shadow-lg transform hover:scale-105 hover:shadow-xl transition inline-flex items-center justify-center gap-2 text-white">
-          <!-- WhatsApp Icon -->
-          <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 32 32" class="w-6 h-6 text-white">
-            <path d="M16 .396c-8.84 0-16 7.16-16 16..."/>
-          </svg>
-          Book via WhatsApp
-        </a>
+    <!-- Buttons -->
+    <div class="flex flex-col sm:flex-row gap-4 mt-6">
+      <!-- WhatsApp Button -->
+      <a href="#booking" id="hero-wa" 
+         class="px-8 py-4 wa-btn text-lg font-semibold text-center shadow-lg transform hover:scale-105 hover:shadow-xl transition inline-flex items-center justify-center gap-2">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="#25D366" viewBox="0 0 32 32" class="w-6 h-6">
+          <path d="M16 .396c-8.84 0-16 7.16-16 16..."/>
+        </svg>
+        <span class="text-[#25D366]">Book via WhatsApp</span>
+      </a>
 
-        <a href="#booking"
-           id="hero-email"
-           class="px-8 py-4 brand-btn text-lg font-semibold text-center shadow-lg transform hover:scale-105 hover:shadow-xl transition inline-flex items-center justify-center gap-2 text-white">
-          <!-- Envelope Icon -->
-          <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24" class="w-6 h-6 text-white">
-            <path d="M20 4H4c-1.1 0-2 .9-2 2..."/>
-          </svg>
-          Book via Email
-        </a>
+      <!-- Email Button -->
+      <a href="#booking" id="hero-email" 
+         class="px-8 py-4 brand-btn text-lg font-semibold text-center shadow-lg transform hover:scale-105 hover:shadow-xl transition inline-flex items-center justify-center gap-2 text-white">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24" class="w-6 h-6 text-white">
+          <path d="M20 4H4c-1.1 0-2 .9-2 2v12..."/>
+        </svg>
+        Book via Email
+      </a>
 
-        <a href="tel:+447594261537"
-           class="px-8 py-4 bg-yellow-500 text-white rounded-lg shadow-lg text-lg font-semibold text-center transform hover:scale-105 hover:shadow-xl transition inline-flex items-center justify-center gap-2">
-          <!-- Phone Icon -->
-          <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24" class="w-6 h-6 text-white">
-            <path d="M6.62 10.79a15.09 15.09 0 006.59 6.59..."/>
-          </svg>
-          Call Now
-        </a>
-      </div>
+      <!-- Call Now Button -->
+      <a href="tel:+447594261537"
+         class="px-8 py-4 bg-yellow-500 text-white rounded-lg shadow-lg text-lg font-semibold text-center transform hover:scale-105 hover:shadow-xl transition inline-flex items-center justify-center gap-2">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24" class="w-6 h-6 text-white">
+          <path d="M6.62 10.79a15.09 15.09 0..."/>
+        </svg>
+        Call Now
+      </a>
     </div>
-  </section>
+  </div>
+</section>
 
   <!-- BOOKING SECTION -->
   <section id="booking" class="py-16">
@@ -167,22 +158,20 @@
           <textarea name="notes" placeholder="Additional notes (optional)" class="p-3 border rounded md:col-span-2 w-full" rows="3"></textarea>
         </div>
 
-        <!-- Booking Action Buttons -->
+        <!-- Booking Buttons -->
         <div id="booking-actions" class="mt-4 flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center lg:justify-start">
-          <button type="button" id="send-wa"
+          <button type="button" id="send-wa" 
                   class="px-8 py-4 wa-btn text-lg font-semibold text-center shadow-lg transform hover:scale-105 hover:shadow-xl transition inline-flex items-center justify-center gap-2 w-full sm:w-auto">
-            <!-- WhatsApp Icon -->
-            <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 32 32" class="w-6 h-6">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="#25D366" viewBox="0 0 32 32" class="w-6 h-6">
               <path d="M16 .396c-8.84 0-16 7.16-16 16..."/>
             </svg>
-            Send via WhatsApp
+            <span class="text-[#25D366]">Send via WhatsApp</span>
           </button>
 
-          <button type="button" id="send-email"
+          <button type="button" id="send-email" 
                   class="px-8 py-4 brand-btn text-lg font-semibold text-center shadow-lg transform hover:scale-105 hover:shadow-xl transition inline-flex items-center justify-center gap-2 w-full sm:w-auto">
-            <!-- Envelope Icon -->
-            <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24" class="w-6 h-6">
-              <path d="M20 4H4c-1.1 0-2 .9-2 2..."/>
+            <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24" class="w-6 h-6 text-white">
+              <path d="M20 4H4c-1.1 0-2 .9-2 2v12..."/>
             </svg>
             Send via Email
           </button>
@@ -234,35 +223,31 @@
     const bookingForm = document.getElementById("bookingForm");
     const sendWaBtn = document.getElementById("send-wa");
     const sendEmailBtn = document.getElementById("send-email");
-    const actionsContainer = document.getElementById("booking-actions");
 
-    // Build links
-    const buildWhatsAppLink = (msg = "") => `https://wa.me/${WA_PHONE}?text=${encodeURIComponent(msg)}`;
-    const buildEmailLink = (subject = "AeroRide Booking", body = "") =>
-      `mailto:${EMAIL}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+    const buildWhatsAppLink = (msg) => `https://wa.me/${WA_PHONE}?text=${encodeURIComponent(msg)}`;
+    const buildEmailLink = (subject, body) => `mailto:${EMAIL}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
 
-    // Build message from form
     const buildMessage = () => {
       const form = Object.fromEntries(new FormData(bookingForm).entries());
       return {
         subject: `Booking Request from ${form.name || "Guest"}`,
         body:
           `Booking request:\n\n` +
-          `Name: ${form.name || ""}\n` +
-          `Phone: ${form.phone || ""}\n` +
-          `Pickup: ${form.pickup || ""}\n` +
-          `Dropoff: ${form.dropoff || ""}\n` +
-          `Date: ${form.date || ""} ${form.time || ""}\n` +
-          `Passengers: ${form.passengers || ""}\n` +
+          `Name: ${form.name}\n` +
+          `Phone: ${form.phone}\n` +
+          `Pickup: ${form.pickup}\n` +
+          `Dropoff: ${form.dropoff}\n` +
+          `Date: ${form.date} ${form.time}\n` +
+          `Passengers: ${form.passengers}\n` +
           (form.flight ? `Flight: ${form.flight}\n` : "") +
           (form.notes ? `Notes: ${form.notes}\n` : ""),
         wa:
           `Booking request from *${form.name || "Guest"}*\n` +
           `Phone: ${form.phone || "N/A"}\n` +
-          `Pickup: ${form.pickup || ""}\n` +
-          `Dropoff: ${form.dropoff || ""}\n` +
-          `Date: ${form.date || ""} ${form.time || ""}\n` +
-          `Passengers: ${form.passengers || ""}\n` +
+          `Pickup: ${form.pickup}\n` +
+          `Dropoff: ${form.dropoff}\n` +
+          `Date: ${form.date} ${form.time}\n` +
+          `Passengers: ${form.passengers}\n` +
           (form.flight ? `Flight: ${form.flight}\n` : "") +
           (form.notes ? `Notes: ${form.notes}\n` : "")
       };
@@ -279,13 +264,6 @@
       const { subject, body } = buildMessage();
       window.location.href = buildEmailLink(subject, body);
     });
-
-    // Reorder booking buttons
-    if (isMobile) {
-      actionsContainer.insertBefore(sendWaBtn, actionsContainer.firstChild);
-    } else {
-      actionsContainer.insertBefore(sendEmailBtn, actionsContainer.firstChild);
-    }
 
     // Footer year
     document.getElementById("year").textContent = new Date().getFullYear();
