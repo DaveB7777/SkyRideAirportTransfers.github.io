@@ -6,17 +6,29 @@
   <title>AeroRide - Airport Transfers</title>
   <script src="https://cdn.tailwindcss.com"></script>
 
-  <style>
-    .brand-btn {
-      @apply bg-blue-900 text-white rounded-lg shadow hover:bg-blue-950 transition-colors duration-300;
-    }
-    .wa-btn {
-      @apply bg-green-600 rounded-lg shadow hover:bg-green-700 transition-colors duration-300;
-    }
-    .secondary-btn {
-      @apply border border-gray-300 bg-white text-gray-700 rounded-lg hover:bg-gray-50 transition-colors duration-300;
-    }
-  </style>
+<style>
+  .brand-btn {
+    @apply bg-blue-900 text-white rounded-lg shadow hover:bg-blue-950 transition-colors duration-300;
+  }
+  .wa-btn {
+    @apply bg-green-600 rounded-lg shadow transition-colors duration-300;
+  }
+  .wa-btn span, 
+  .wa-btn svg {
+    color: #25D366; /* WhatsApp green */
+    fill: #25D366;
+    transition: color 0.3s ease, fill 0.3s ease;
+  }
+  .wa-btn:hover span, 
+  .wa-btn:hover svg {
+    color: #1ebe5d; /* brighter green */
+    fill: #1ebe5d;
+  }
+  .secondary-btn {
+    @apply border border-gray-300 bg-white text-gray-700 rounded-lg hover:bg-gray-50 transition-colors duration-300;
+  }
+</style>
+
 </head>
 <body class="min-h-screen font-sans text-gray-800 bg-gray-50">
 
@@ -270,3 +282,4 @@
   </script>
 </body>
 </html>
+
