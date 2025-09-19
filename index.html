@@ -6,29 +6,17 @@
   <title>AeroRide - Airport Transfers</title>
   <script src="https://cdn.tailwindcss.com"></script>
 
-<style>
-  .brand-btn {
-    @apply bg-blue-900 text-white rounded-lg shadow hover:bg-blue-950 transition-colors duration-300;
-  }
-  .wa-btn {
-    @apply bg-green-600 rounded-lg shadow transition-colors duration-300;
-  }
-  .wa-btn span, 
-  .wa-btn svg {
-    color: #25D366; /* WhatsApp green */
-    fill: #25D366;
-    transition: color 0.3s ease, fill 0.3s ease;
-  }
-  .wa-btn:hover span, 
-  .wa-btn:hover svg {
-    color: #1ebe5d; /* brighter green */
-    fill: #1ebe5d;
-  }
-  .secondary-btn {
-    @apply border border-gray-300 bg-white text-gray-700 rounded-lg hover:bg-gray-50 transition-colors duration-300;
-  }
-</style>
-
+  <style>
+    .brand-btn {
+      @apply bg-blue-900 text-white rounded-lg shadow hover:bg-blue-950 transition-colors duration-300;
+    }
+    .wa-btn {
+      @apply bg-green-600 text-white rounded-lg shadow hover:bg-green-700 transition-colors duration-300;
+    }
+    .secondary-btn {
+      @apply border border-gray-300 bg-white text-gray-700 rounded-lg hover:bg-gray-50 transition-colors duration-300;
+    }
+  </style>
 </head>
 <body class="min-h-screen font-sans text-gray-800 bg-gray-50">
 
@@ -48,8 +36,14 @@
         </div>
 
         <div class="flex items-center space-x-3">
-          <a href="#booking" class="hidden md:inline-flex items-center px-4 py-2 text-sm brand-btn">Email Us</a>
-          <a href="#booking" class="hidden md:inline-flex items-center px-4 py-2 text-sm wa-btn text-[#25D366]">WhatsApp</a>
+          <a id="email-link" class="hidden md:inline-flex items-center px-4 py-2 text-sm brand-btn">Email Us</a>
+          <a id="wa-link" class="hidden md:inline-flex items-center px-4 py-2 text-sm wa-btn">
+            <!-- WhatsApp Icon -->
+            <svg xmlns="http://www.w3.org/2000/svg" fill="white" viewBox="0 0 32 32" class="w-4 h-4 mr-2">
+              <path d="M16 .396c-8.84 0-16 7.16-16 16 0 2.82.74 5.56 2.15 7.98L.074 32l7.77-2.04c2.34 1.28 4.98 1.95 7.73 1.95h.01c8.84 0 16-7.16 16-16 0-4.27-1.66-8.28-4.68-11.32C24.28 2.056 20.27.396 16 .396zm0 29.16c-2.45 0-4.83-.65-6.9-1.88l-.5-.3-4.62 1.21 1.23-4.49-.32-.51c-1.34-2.1-2.05-4.52-2.05-7.01 0-7.24 5.9-13.14 13.14-13.14 3.52 0 6.83 1.37 9.32 3.86s3.86 5.8 3.86 9.32c0 7.24-5.9 13.14-13.14 13.14zm7.18-9.88c-.39-.19-2.29-1.13-2.64-1.26-.35-.13-.61-.19-.87.19-.26.39-1 1.26-1.23 1.52-.23.26-.45.29-.84.1-.39-.19-1.64-.61-3.12-1.95-1.15-1.03-1.93-2.29-2.16-2.68-.23-.39-.02-.6.17-.79.17-.17.39-.45.58-.68.19-.23.26-.39.39-.65.13-.26.06-.49-.03-.68-.1-.19-.87-2.1-1.2-2.88-.32-.77-.65-.67-.87-.68h-.74c-.26 0-.68.1-1.03.49-.35.39-1.35 1.32-1.35 3.22s1.38 3.74 1.58 4 .29.58.58.94c.29.35 1.72 2.62 4.17 3.67.58.25 1.03.39 1.38.5.58.19 1.11.16 1.52.1.46-.07 1.42-.58 1.62-1.14.2-.55.2-1.02.14-1.14-.06-.13-.23-.19-.49-.32z"/>
+            </svg>
+            WhatsApp
+          </a>
           <div class="md:hidden">
             <button id="mobile-menu-btn" class="p-2 rounded-md hover:bg-gray-100">
               <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -68,15 +62,15 @@
       <a href="#fleet" class="hover:text-blue-900">Fleet</a>
       <a href="#booking" class="hover:text-blue-900">Booking</a>
       <a href="#contact" class="hover:text-blue-900">Contact</a>
-      <a href="#booking" class="px-4 py-2 w-3/4 text-center brand-btn">Email Us</a>
-      <a href="#booking" class="px-4 py-2 w-3/4 text-center wa-btn text-[#25D366]">WhatsApp</a>
-      <a href="tel:+447594261537" class="px-4 py-2 w-3/4 text-center bg-yellow-500 text-white rounded-lg shadow hover:bg-yellow-600">Call Now</a>
+      <a id="email-link-mobile" class="px-4 py-2 w-3/4 text-center brand-btn">Email Us</a>
+      <a id="wa-link-mobile" class="px-4 py-2 w-3/4 text-center wa-btn">WhatsApp</a>
+      <a href="tel:+447594261537" class="px-4 py-2 w-3/4 text-center bg-amber-500 hover:bg-amber-600 text-white rounded-lg shadow">Call Now</a>
     </div>
   </header>
 
   <!-- Floating Call Button -->
   <a href="tel:+447594261537" id="floating-call-btn"
-     class="fixed bottom-4 right-4 bg-yellow-500 text-white p-5 rounded-full shadow hover:bg-yellow-600 md:hidden transition-colors">
+     class="fixed bottom-4 right-4 bg-amber-500 text-white p-5 rounded-full shadow hover:bg-amber-600 md:hidden transition-colors">
     📞
   </a>
 
@@ -117,183 +111,166 @@
       Book in seconds via phone, WhatsApp, or email.
     </p>
 
-    <!-- Buttons -->
     <div class="flex flex-col sm:flex-row gap-4 mt-6">
       <!-- WhatsApp Button -->
-      <a href="#booking" id="hero-wa" 
+      <a id="hero-wa" 
          class="px-8 py-4 wa-btn text-lg font-semibold text-center shadow-lg transform hover:scale-105 hover:shadow-xl transition inline-flex items-center justify-center gap-2">
-        <svg xmlns="http://www.w3.org/2000/svg" fill="#25D366" viewBox="0 0 32 32" class="w-6 h-6">
-          <path d="M16 .396c-8.84 0-16 7.16-16 16..."/>
-        </svg>
-        <span class="text-[#25D366]">Book via WhatsApp</span>
+         <svg xmlns="http://www.w3.org/2000/svg" fill="white" viewBox="0 0 32 32" class="w-6 h-6">
+           <path d="M16 .396c-8.84 0-16 7.16-16 16 0 2.82..."/>
+         </svg>
+         Book via WhatsApp
       </a>
 
       <!-- Email Button -->
-      <a href="#booking" id="hero-email" 
-         class="px-8 py-4 brand-btn text-lg font-semibold text-center shadow-lg transform hover:scale-105 hover:shadow-xl transition inline-flex items-center justify-center gap-2 text-white">
-        <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24" class="w-6 h-6 text-white">
-          <path d="M20 4H4c-1.1 0-2 .9-2 2v12..."/>
-        </svg>
-        Book via Email
+      <a id="hero-email" 
+         class="px-8 py-4 brand-btn text-lg font-semibold text-center shadow-lg transform hover:scale-105 hover:shadow-xl transition inline-flex items-center justify-center gap-2">
+         <svg xmlns="http://www.w3.org/2000/svg" fill="white" viewBox="0 0 24 24" class="w-6 h-6">
+           <path d="M20 4H4c-1.1 0-2 .9-2 2..."/>
+         </svg>
+         Book via Email
       </a>
-      
-<!-- Hero Call Now Button -->
-<a href="tel:+447594261537"
-   class="px-8 py-4 bg-amber-500 text-white rounded-lg shadow-lg text-lg font-semibold text-center transform hover:scale-105 hover:shadow-xl transition inline-flex items-center justify-center gap-2">
-   <!-- Phone Icon -->
-   <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24" class="w-6 h-6 text-white">
-     <path d="M6.62 10.79a15.09 15.09 0 006.59 6.59l2.2-2.2a1 
-              1 0 011.01-.24c1.12.37 2.33.57 3.58.57a1 
-              1 0 011 1v3.5a1 1 0 01-1 1C10.3 21.01 
-              3 13.71 3 5.5a1 1 0 011-1H7.5a1 1 
-              0 011 1c0 1.25.2 2.46.57 3.59a1 
-              1 0 01-.24 1.01l-2.2 2.2z"/>
-   </svg>
-   Call Now
-</a>
 
-<!-- Floating Call Button -->
-<a href="tel:+447594261537" id="floating-call-btn"
-   class="fixed bottom-4 right-4 bg-amber-500 text-white p-5 rounded-full shadow hover:bg-amber-600 md:hidden transition-colors">
-  📞
-</a>
-
+      <!-- Call Now Button -->
+      <a href="tel:+447594261537"
+         class="px-8 py-4 bg-amber-500 text-white rounded-lg shadow-lg text-lg font-semibold text-center transform hover:scale-105 hover:shadow-xl transition inline-flex items-center justify-center gap-2">
+         <svg xmlns="http://www.w3.org/2000/svg" fill="white" viewBox="0 0 24 24" class="w-6 h-6">
+           <path d="M6.62 10.79a15.09..."/>
+         </svg>
+         Call Now
+      </a>
     </div>
   </div>
 </section>
 
-  <!-- BOOKING SECTION -->
-  <section id="booking" class="py-16">
-    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-      <h2 class="text-2xl font-bold mb-4 text-center lg:text-left">Book your transfer</h2>
-      <p class="text-sm text-gray-600 mb-6 text-center lg:text-left">
-        Fill the details and choose how to send your request.
-      </p>
+<!-- BOOKING SECTION -->
+<section id="booking" class="py-16">
+  <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+    <h2 class="text-2xl font-bold mb-4 text-center lg:text-left">Book your transfer</h2>
+    <p class="text-sm text-gray-600 mb-6 text-center lg:text-left">
+      Fill the details and choose how to send your request.
+    </p>
 
-      <form id="bookingForm" class="bg-white p-6 rounded-lg shadow">
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-          <input required name="name" placeholder="Full name" class="p-3 border rounded w-full" />
-          <input required name="phone" placeholder="Contact phone" class="p-3 border rounded w-full" />
-          <input required name="pickup" placeholder="Pickup address / Airport" class="p-3 border rounded md:col-span-2 w-full" />
-          <input required name="dropoff" placeholder="Drop-off address / Hotel" class="p-3 border rounded md:col-span-2 w-full" />
-          <input required type="date" name="date" class="p-3 border rounded w-full" />
-          <input required type="time" name="time" class="p-3 border rounded w-full" />
-          <input required type="number" min="1" name="passengers" placeholder="Passengers" class="p-3 border rounded w-full" />
-          <input name="flight" placeholder="Flight number (optional)" class="p-3 border rounded w-full" />
-          <textarea name="notes" placeholder="Additional notes (optional)" class="p-3 border rounded md:col-span-2 w-full" rows="3"></textarea>
-        </div>
-
-        <!-- Booking Buttons -->
-        <div id="booking-actions" class="mt-4 flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center lg:justify-start">
-          <button type="button" id="send-wa" 
-                  class="px-8 py-4 wa-btn text-lg font-semibold text-center shadow-lg transform hover:scale-105 hover:shadow-xl transition inline-flex items-center justify-center gap-2 w-full sm:w-auto">
-            <svg xmlns="http://www.w3.org/2000/svg" fill="#25D366" viewBox="0 0 32 32" class="w-6 h-6">
-              <path d="M16 .396c-8.84 0-16 7.16-16 16..."/>
-            </svg>
-            <span class="text-[#25D366]">Send via WhatsApp</span>
-          </button>
-
-          <button type="button" id="send-email" 
-                  class="px-8 py-4 brand-btn text-lg font-semibold text-center shadow-lg transform hover:scale-105 hover:shadow-xl transition inline-flex items-center justify-center gap-2 w-full sm:w-auto">
-            <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24" class="w-6 h-6 text-white">
-              <path d="M20 4H4c-1.1 0-2 .9-2 2v12..."/>
-            </svg>
-            Send via Email
-          </button>
-
-          <button type="reset" class="px-4 py-2 secondary-btn w-full sm:w-auto">Clear</button>
-        </div>
-
-        <p class="text-xs text-gray-500 mt-3 text-center lg:text-left">
-          By sending a message you agree to share these details with AeroRide for booking and communication.
-        </p>
-      </form>
-    </div>
-  </section>
-
-  <!-- TESTIMONIALS -->
-  <section id="testimonials" class="py-16 bg-gray-50">
-    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-      <h2 class="text-2xl font-bold mb-6 text-center lg:text-left">What customers say</h2>
-      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-        <div class="p-4 bg-white rounded shadow text-center sm:text-left">
-          <p class="text-sm">"Driver was on time and very friendly. Smooth trip to the hotel."</p>
-          <div class="mt-3 text-xs text-gray-500">— Sarah L.</div>
-        </div>
-        <div class="p-4 bg-white rounded shadow text-center sm:text-left">
-          <p class="text-sm">"Great service. Flight was delayed and they were waiting when we landed."</p>
-          <div class="mt-3 text-xs text-gray-500">— Mark D.</div>
-        </div>
-        <div class="p-4 bg-white rounded shadow text-center sm:text-left">
-          <p class="text-sm">"Easy booking via WhatsApp and clear pricing. Highly recommended."</p>
-          <div class="mt-3 text-xs text-gray-500">— Anna P.</div>
-        </div>
+    <form id="bookingForm" class="bg-white p-6 rounded-lg shadow">
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+        <input required name="name" placeholder="Full name" class="p-3 border rounded w-full" />
+        <input required name="phone" placeholder="Contact phone" class="p-3 border rounded w-full" />
+        <input required name="pickup" placeholder="Pickup address / Airport" class="p-3 border rounded md:col-span-2 w-full" />
+        <input required name="dropoff" placeholder="Drop-off address / Hotel" class="p-3 border rounded md:col-span-2 w-full" />
+        <input required type="date" name="date" class="p-3 border rounded w-full" />
+        <input required type="time" name="time" class="p-3 border rounded w-full" />
+        <input required type="number" min="1" name="passengers" placeholder="Passengers" class="p-3 border rounded w-full" />
+        <input name="flight" placeholder="Flight number (optional)" class="p-3 border rounded w-full" />
+        <textarea name="notes" placeholder="Additional notes (optional)" class="p-3 border rounded md:col-span-2 w-full" rows="3"></textarea>
       </div>
-    </div>
-  </section>
 
-  <!-- FOOTER -->
-  <footer class="bg-white border-t py-6">
-    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-center text-sm text-gray-600">
-      © <span id="year"></span> AeroRide. All rights reserved.
-    </div>
-  </footer>
+      <div id="booking-actions" class="mt-4 flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center lg:justify-start">
+        <!-- WhatsApp -->
+        <button type="button" id="send-wa" 
+                class="px-8 py-4 wa-btn text-lg font-semibold shadow-lg transform hover:scale-105 hover:shadow-xl transition inline-flex items-center justify-center gap-2">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="white" viewBox="0 0 32 32" class="w-6 h-6">
+            <path d="M16 .396c-8.84 0-16 7.16-16..."/>
+          </svg>
+          Send via WhatsApp
+        </button>
 
-  <!-- SCRIPT -->
-  <script>
-    const EMAIL = "bookings@aeroride.com";
-    const WA_PHONE = "447594261537";
-    const isMobile = /iPhone|iPad|iPod|Android|Windows Phone/i.test(navigator.userAgent);
+        <!-- Email -->
+        <button type="button" id="send-email" 
+                class="px-8 py-4 brand-btn text-lg font-semibold shadow-lg transform hover:scale-105 hover:shadow-xl transition inline-flex items-center justify-center gap-2">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="white" viewBox="0 0 24 24" class="w-6 h-6">
+            <path d="M20 4H4c-1.1 0-2 .9-2 2..."/>
+          </svg>
+          Send via Email
+        </button>
 
-    const bookingForm = document.getElementById("bookingForm");
-    const sendWaBtn = document.getElementById("send-wa");
-    const sendEmailBtn = document.getElementById("send-email");
+        <button type="reset" class="px-4 py-2 secondary-btn w-full sm:w-auto">Clear</button>
+      </div>
 
-    const buildWhatsAppLink = (msg) => `https://wa.me/${WA_PHONE}?text=${encodeURIComponent(msg)}`;
-    const buildEmailLink = (subject, body) => `mailto:${EMAIL}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+      <p class="text-xs text-gray-500 mt-3 text-center lg:text-left">
+        By sending a message you agree to share these details with AeroRide for booking and communication.
+      </p>
+    </form>
+  </div>
+</section>
 
-    const buildMessage = () => {
-      const form = Object.fromEntries(new FormData(bookingForm).entries());
-      return {
-        subject: `Booking Request from ${form.name || "Guest"}`,
-        body:
-          `Booking request:\n\n` +
-          `Name: ${form.name}\n` +
-          `Phone: ${form.phone}\n` +
-          `Pickup: ${form.pickup}\n` +
-          `Dropoff: ${form.dropoff}\n` +
-          `Date: ${form.date} ${form.time}\n` +
-          `Passengers: ${form.passengers}\n` +
-          (form.flight ? `Flight: ${form.flight}\n` : "") +
-          (form.notes ? `Notes: ${form.notes}\n` : ""),
-        wa:
-          `Booking request from *${form.name || "Guest"}*\n` +
-          `Phone: ${form.phone || "N/A"}\n` +
-          `Pickup: ${form.pickup}\n` +
-          `Dropoff: ${form.dropoff}\n` +
-          `Date: ${form.date} ${form.time}\n` +
-          `Passengers: ${form.passengers}\n` +
-          (form.flight ? `Flight: ${form.flight}\n` : "") +
-          (form.notes ? `Notes: ${form.notes}\n` : "")
-      };
+<!-- FOOTER -->
+<footer class="bg-white border-t py-6">
+  <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-center text-sm text-gray-600">
+    © <span id="year"></span> AeroRide. All rights reserved.
+  </div>
+</footer>
+
+<script>
+  const EMAIL = "bookings@aeroride.com";
+  const WA_PHONE = "447594261537";
+  const isMobile = /iPhone|iPad|iPod|Android|Windows Phone/i.test(navigator.userAgent);
+
+  const bookingForm = document.getElementById("bookingForm");
+  const sendWaBtn = document.getElementById("send-wa");
+  const sendEmailBtn = document.getElementById("send-email");
+  const actionsContainer = document.getElementById("booking-actions");
+
+  const waBtn = document.getElementById("wa-link");
+  const waBtnMobile = document.getElementById("wa-link-mobile");
+  const heroWaBtn = document.getElementById("hero-wa");
+
+  const emailBtn = document.getElementById("email-link");
+  const emailBtnMobile = document.getElementById("email-link-mobile");
+  const heroEmailBtn = document.getElementById("hero-email");
+
+  const buildWhatsAppLink = (msg) => `https://wa.me/${WA_PHONE}?text=${encodeURIComponent(msg)}`;
+  const buildEmailLink = (subject, body) => `mailto:${EMAIL}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+
+  const buildMessage = () => {
+    const form = Object.fromEntries(new FormData(bookingForm).entries());
+    return {
+      subject: `Booking Request from ${form.name || "Guest"}`,
+      body:
+        `Booking request:\n\n` +
+        `Name: ${form.name}\n` +
+        `Phone: ${form.phone}\n` +
+        `Pickup: ${form.pickup}\n` +
+        `Dropoff: ${form.dropoff}\n` +
+        `Date: ${form.date} ${form.time}\n` +
+        `Passengers: ${form.passengers}\n` +
+        (form.flight ? `Flight: ${form.flight}\n` : "") +
+        (form.notes ? `Notes: ${form.notes}\n` : ""),
+      wa:
+        `Booking request from *${form.name || "Guest"}*\n` +
+        `Phone: ${form.phone || "N/A"}\n` +
+        `Pickup: ${form.pickup}\n` +
+        `Dropoff: ${form.dropoff}\n` +
+        `Date: ${form.date} ${form.time}\n` +
+        `Passengers: ${form.passengers}\n` +
+        (form.flight ? `Flight: ${form.flight}\n` : "") +
+        (form.notes ? `Notes: ${form.notes}\n` : "")
     };
+  };
 
-    // WhatsApp send
-    sendWaBtn?.addEventListener("click", () => {
-      const { wa } = buildMessage();
-      window.open(buildWhatsAppLink(wa), "_blank");
-    });
+  // Init links
+  waBtn.href = buildWhatsAppLink();
+  waBtnMobile.href = buildWhatsAppLink();
+  heroWaBtn.href = buildWhatsAppLink();
+  emailBtn.href = buildEmailLink();
+  emailBtnMobile.href = buildEmailLink();
+  heroEmailBtn.href = buildEmailLink();
 
-    // Email send
-    sendEmailBtn?.addEventListener("click", () => {
-      const { subject, body } = buildMessage();
-      window.location.href = buildEmailLink(subject, body);
-    });
+  sendWaBtn?.addEventListener("click", () => {
+    const { wa } = buildMessage();
+    window.open(buildWhatsAppLink(wa), "_blank");
+  });
 
-    // Footer year
-    document.getElementById("year").textContent = new Date().getFullYear();
-  </script>
+  sendEmailBtn?.addEventListener("click", () => {
+    const { subject, body } = buildMessage();
+    window.location.href = buildEmailLink(subject, body);
+  });
+
+  if (isMobile) {
+    actionsContainer.insertBefore(sendWaBtn, actionsContainer.firstChild);
+  } else {
+    actionsContainer.insertBefore(sendEmailBtn, actionsContainer.firstChild);
+  }
+
+  document.getElementById("year").textContent = new Date().getFullYear();
+</script>
 </body>
 </html>
-
-
