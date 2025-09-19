@@ -180,11 +180,33 @@
           <textarea name="notes" placeholder="Additional notes (optional)" class="p-3 border rounded md:col-span-2 w-full" rows="3"></textarea>
         </div>
 
-        <div id="booking-actions" class="mt-4 flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center lg:justify-start">
-          <button type="button" id="send-wa" class="px-5 py-3 wa-btn text-center w-full sm:w-auto">📲 Send via WhatsApp</button>
-          <button type="button" id="send-email" class="px-5 py-3 brand-btn text-center w-full sm:w-auto">💌 Send via Email</button>
-          <button type="reset" class="px-4 py-2 secondary-btn w-full sm:w-auto">Clear</button>
-        </div>
+<div id="booking-actions" class="mt-4 flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center lg:justify-start">
+  <!-- WhatsApp Button -->
+  <button type="button" id="send-wa" 
+          class="px-8 py-4 wa-btn text-lg font-semibold text-center shadow-lg transform hover:scale-105 hover:shadow-xl transition inline-flex items-center justify-center gap-2 w-full sm:w-auto">
+    <!-- WhatsApp Icon -->
+    <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 32 32" class="w-6 h-6">
+      <path d="M16 .396c-8.84 0-16 7.16-16 16 0 2.82.74 5.56 2.15 7.98L.074 32l7.77-2.04c2.34 1.28 4.98 1.95 7.73 1.95h.01c8.84 0 16-7.16 16-16 0-4.27-1.66-8.28-4.68-11.32C24.28 2.056 20.27.396 16 .396zm0 29.16c-2.45 0-4.83-.65-6.9-1.88l-.5-.3-4.62 1.21 1.23-4.49-.32-.51c-1.34-2.1-2.05-4.52-2.05-7.01 0-7.24 5.9-13.14 13.14-13.14 3.52 0 6.83 1.37 9.32 3.86s3.86 5.8 3.86 9.32c0 7.24-5.9 13.14-13.14 13.14zm7.18-9.88c-.39-.19-2.29-1.13-2.64-1.26-.35-.13-.61-.19-.87.19-.26.39-1 1.26-1.23 1.52-.23.26-.45.29-.84.1-.39-.19-1.64-.61-3.12-1.95-1.15-1.03-1.93-2.29-2.16-2.68-.23-.39-.02-.6.17-.79.17-.17.39-.45.58-.68.19-.23.26-.39.39-.65.13-.26.06-.49-.03-.68-.1-.19-.87-2.1-1.2-2.88-.32-.77-.65-.67-.87-.68h-.74c-.26 0-.68.1-1.03.49-.35.39-1.35 1.32-1.35 3.22s1.38 3.74 1.58 4 .29.58.58.94c.29.35 1.72 2.62 4.17 3.67.58.25 1.03.39 1.38.5.58.19 1.11.16 1.52.1.46-.07 1.42-.58 1.62-1.14.2-.55.2-1.02.14-1.14-.06-.13-.23-.19-.49-.32z"/>
+    </svg>
+    Send via WhatsApp
+  </button>
+
+  <!-- Email Button -->
+  <button type="button" id="send-email" 
+          class="px-8 py-4 brand-btn text-lg font-semibold text-center shadow-lg transform hover:scale-105 hover:shadow-xl transition inline-flex items-center justify-center gap-2 w-full sm:w-auto">
+    <!-- Envelope Icon -->
+    <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24" class="w-6 h-6">
+      <path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 
+               2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 
+               4-8 5-8-5V6l8 5 8-5v2z"/>
+    </svg>
+    Send via Email
+  </button>
+
+  <!-- Reset Button -->
+  <button type="reset" class="px-4 py-2 secondary-btn w-full sm:w-auto">Clear</button>
+</div>
+
 
         <p class="text-xs text-gray-500 mt-3 text-center lg:text-left">
           By sending a message you agree to share these details with AeroRide for booking and communication.
@@ -301,6 +323,7 @@
   </script>
 </body>
 </html>
+
 
 
 
