@@ -194,6 +194,7 @@
   </footer>
 
   <script>
+  document.addEventListener("DOMContentLoaded", () => {
     document.getElementById("year").textContent = new Date().getFullYear();
 
     const EMAIL = "bookings@aeroride.com";
@@ -206,7 +207,7 @@
     const buildWhatsAppLink = (msg) => `https://wa.me/${WA_PHONE}?text=${encodeURIComponent(msg)}`;
     const buildEmailLink = (subject, body) => `mailto:${EMAIL}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
 
-    // Build booking message
+    // Build message
     const buildMessage = () => {
       const form = Object.fromEntries(new FormData(bookingForm).entries());
       return {
@@ -265,15 +266,22 @@
       window.location.href = buildEmailLink(subject, body);
     });
 
-    // Mobile menu toggle
-    document.getElementById("menu-toggle").addEventListener("click", () => {
-      document.getElementById("mobile-menu").classList.toggle("hidden");
+    // ✅ Mobile menu toggle (fixed)
+    const menuToggle = document.getElementById("menu-toggle");
+    const mobileMenu = document.getElementById("mobile-menu");
+    menuToggle.addEventListener("click", () => {
+      mobileMenu.classList.toggle("hidden");
     });
 
-    // Show/hide return fields
+    // ✅ Show/hide return fields
     const returnTripSelect = document.getElementById("returnTrip");
     const returnFields = document.getElementById("returnFields");
-    const returnDate = document.getElementById("returnDate");
-    const returnTime = document.getElementById("returnTime");
-
-    returnTripSelect.addEventListener("change", ()
+    returnTripSelect.addEventListener("change", () => {
+      if (returnTripSelect.value === "Return") {
+        returnFields.classList.remove("hidden");
+      } else {
+        returnFields.classList.add("hidden");
+      }
+    });
+  });
+</script>
