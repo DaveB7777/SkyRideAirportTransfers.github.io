@@ -6,26 +6,15 @@
   <title>AeroRide - Airport Transfers</title>
   <script src="https://cdn.tailwindcss.com"></script>
 
-  <!-- Custom Styles -->
   <style>
-    /* Pulse glow animation for buttons */
-    .pulse-glow {
-      box-shadow: 0 4px 15px rgba(34, 197, 94, 0.5), 0 6px 20px rgba(34, 197, 94, 0.3);
-      animation: pulse-glow 2s infinite alternate;
+    .brand-btn {
+      @apply bg-blue-900 text-white rounded-lg shadow hover:bg-blue-950 transition-colors duration-300;
     }
-
-    @keyframes pulse-glow {
-      0% {
-        box-shadow: 0 4px 15px rgba(34, 197, 94, 0.5), 0 6px 20px rgba(34, 197, 94, 0.3);
-      }
-      100% {
-        box-shadow: 0 6px 20px rgba(34, 197, 94, 0.8), 0 10px 30px rgba(34, 197, 94, 0.5);
-      }
+    .wa-btn {
+      @apply bg-green-600 text-white rounded-lg shadow hover:bg-green-700 transition-colors duration-300;
     }
-
-    /* Reusable green button */
-    .green-btn {
-      @apply bg-gradient-to-r from-green-500 to-green-600 text-white rounded-lg shadow hover:from-green-600 hover:to-green-700 pulse-glow;
+    .secondary-btn {
+      @apply border border-gray-300 bg-white text-gray-700 rounded-lg hover:bg-gray-50 transition-colors duration-300;
     }
   </style>
 </head>
@@ -36,26 +25,19 @@
     <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="flex justify-between items-center h-16">
         <div class="flex items-center space-x-3">
-          <div class="text-2xl font-extrabold text-indigo-600">AeroRide</div>
-          <!-- Desktop Menu -->
+          <div class="text-2xl font-extrabold text-blue-900">AeroRide</div>
           <div class="hidden md:flex items-center space-x-6 text-sm text-gray-600">
-            <a href="#home" class="hover:text-indigo-600">Home</a>
-            <a href="#services" class="hover:text-indigo-600">Services</a>
-            <a href="#fleet" class="hover:text-indigo-600">Fleet</a>
-            <a href="#booking" class="hover:text-indigo-600">Booking</a>
-            <a href="#contact" class="hover:text-indigo-600">Contact</a>
+            <a href="#home" class="hover:text-blue-900">Home</a>
+            <a href="#services" class="hover:text-blue-900">Services</a>
+            <a href="#fleet" class="hover:text-blue-900">Fleet</a>
+            <a href="#booking" class="hover:text-blue-900">Booking</a>
+            <a href="#contact" class="hover:text-blue-900">Contact</a>
           </div>
         </div>
 
         <div class="flex items-center space-x-3">
-          <!-- Email + WhatsApp buttons -->
-          <a id="email-link" target="_blank" rel="noreferrer" class="hidden md:inline-flex items-center px-4 py-2 text-sm bg-indigo-500 text-white rounded-lg shadow hover:bg-indigo-600">
-            Email Us
-          </a>
-          <a id="wa-link" target="_blank" rel="noreferrer" class="hidden md:inline-flex items-center px-4 py-2 text-sm green-btn">
-            WhatsApp
-          </a>
-          <!-- Mobile Menu Button -->
+          <a id="email-link" class="hidden md:inline-flex items-center px-4 py-2 text-sm brand-btn">Email Us</a>
+          <a id="wa-link" class="hidden md:inline-flex items-center px-4 py-2 text-sm wa-btn">WhatsApp</a>
           <div class="md:hidden">
             <button id="mobile-menu-btn" class="p-2 rounded-md hover:bg-gray-100">
               <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -68,70 +50,52 @@
     </div>
 
     <!-- Mobile Menu -->
-    <div id="mobile-menu" class="hidden md:hidden absolute top-16 left-0 w-full bg-white shadow-md z-30 flex flex-col items-center space-y-4 py-4 transition-transform duration-300">
-      <a href="#home" class="menu-link hover:text-indigo-600">Home</a>
-      <a href="#services" class="menu-link hover:text-indigo-600">Services</a>
-      <a href="#fleet" class="menu-link hover:text-indigo-600">Fleet</a>
-      <a href="#booking" class="menu-link hover:text-indigo-600">Booking</a>
-      <a href="#contact" class="menu-link hover:text-indigo-600">Contact</a>
-      <a id="email-link-mobile" target="_blank" rel="noreferrer" class="px-4 py-2 w-3/4 text-center bg-indigo-500 text-white rounded-lg shadow hover:bg-indigo-600">
-        Email Us
-      </a>
-      <a id="wa-link-mobile" target="_blank" rel="noreferrer" class="px-4 py-2 w-3/4 text-center green-btn">
-        WhatsApp
-      </a>
-      <a href="tel:+447594261537" class="px-4 py-2 w-3/4 text-center green-btn">
-        Call Now
-      </a>
+    <div id="mobile-menu" class="hidden md:hidden absolute top-16 left-0 w-full bg-white shadow-md z-30 flex flex-col items-center space-y-4 py-4">
+      <a href="#home" class="hover:text-blue-900">Home</a>
+      <a href="#services" class="hover:text-blue-900">Services</a>
+      <a href="#fleet" class="hover:text-blue-900">Fleet</a>
+      <a href="#booking" class="hover:text-blue-900">Booking</a>
+      <a href="#contact" class="hover:text-blue-900">Contact</a>
+      <a id="email-link-mobile" class="px-4 py-2 w-3/4 text-center brand-btn">Email Us</a>
+      <a id="wa-link-mobile" class="px-4 py-2 w-3/4 text-center wa-btn">WhatsApp</a>
+      <a href="tel:+447594261537" class="px-4 py-2 w-3/4 text-center brand-btn">Call Now</a>
     </div>
   </header>
 
   <!-- Floating Call Button -->
-  <a href="tel:+447594261537" 
-    id="floating-call-btn"
-    class="fixed bottom-4 right-4 bg-gradient-to-r from-orange-500 to-orange-600 text-white p-5 rounded-full shadow-2xl z-50 flex items-center justify-center hover:from-orange-600 hover:to-orange-700 md:hidden transition-transform duration-300 text-lg">
+  <a href="tel:+447594261537" id="floating-call-btn"
+     class="fixed bottom-4 right-4 bg-blue-900 text-white p-5 rounded-full shadow hover:bg-blue-950 md:hidden transition-colors">
     📞
   </a>
 
-  <!-- HERO SECTION -->
-  <section id="home" class="bg-indigo-600 bg-gradient-to-r from-indigo-600 to-indigo-500 text-white py-16 sm:py-20">
-    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col lg:flex-row items-center gap-10">
-      <div class="w-full lg:w-1/2 text-center lg:text-left">
-        <h1 class="text-3xl sm:text-4xl md:text-5xl font-extrabold leading-tight">
-          Reliable airport transfers — on time, every time
-        </h1>
-        <p class="mt-4 text-lg opacity-90 leading-relaxed">
-          Private cars, professional drivers, flight monitoring and door-to-door service. Book in seconds via phone, WhatsApp, or email.
-        </p>
+<!-- HERO SECTION -->
+<section id="home" class="relative bg-blue-900 text-white">
+  <!-- Background Image -->
+  <div class="absolute inset-0">
+    <img src="images/hero.jpg" alt="airport transfer" class="w-full h-full object-cover" />
+    <!-- Overlay -->
+    <div class="absolute inset-0 bg-blue-900/70"></div>
+  </div>
 
-        <!-- Hero Buttons -->
-        <div class="mt-12 sm:mt-8 flex flex-col sm:flex-row gap-4">
-          <a href="#booking" class="w-full sm:w-auto px-8 py-4 bg-gradient-to-r from-orange-500 to-orange-600 text-white font-semibold rounded-lg shadow-lg hover:scale-105 transition-transform duration-300 text-center">
-            Book Now
-          </a>
-          <a id="hero-wa" target="_blank" rel="noreferrer" class="w-full sm:w-auto px-8 py-4 green-btn text-center">
-            💬 WhatsApp
-          </a>
-          <a id="hero-email" target="_blank" rel="noreferrer" class="w-full sm:w-auto px-8 py-4 bg-indigo-500 text-white font-semibold rounded-lg shadow hover:bg-indigo-600 text-center">
-            💌 Email
-          </a>
-        </div>
-      </div>
+  <!-- Hero Content -->
+  <div class="relative max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-20 flex flex-col items-center lg:items-start text-center lg:text-left">
+    <h1 class="text-3xl sm:text-4xl md:text-5xl font-extrabold leading-tight">
+      Reliable airport transfers — on time, every time
+    </h1>
+    <p class="mt-4 text-lg opacity-90 leading-relaxed max-w-2xl">
+      Private cars, professional drivers, flight monitoring and door-to-door service. 
+      Book in seconds via phone, WhatsApp, or email.
+    </p>
 
-      <!-- Hero Image -->
-      <div class="w-full lg:w-3/4 mt-8 lg:mt-0 sm:block">
-        <div class="rounded-xl overflow-hidden shadow-lg bg-white">
-          <img src="images/hero.jpg" alt="airport transfer" class="w-full h-64 sm:h-80 md:h-96 object-cover" loading="lazy" />
-          <div class="p-6">
-            <h3 class="text-lg font-semibold">Door-to-door transfers</h3>
-            <p class="mt-2 text-sm text-gray-600 leading-relaxed">
-              Comfortable vehicles, punctual drivers, and easy communication through WhatsApp or email for every booking.
-            </p>
-          </div>
-        </div>
-      </div>
+    <!-- Buttons -->
+    <div class="mt-8 flex flex-col sm:flex-row gap-4">
+      <a href="#booking" class="w-full sm:w-auto px-8 py-4 brand-btn font-semibold text-center">Book Now</a>
+      <a id="hero-wa" class="w-full sm:w-auto px-8 py-4 wa-btn font-semibold text-center">💬 WhatsApp</a>
+      <a id="hero-email" class="w-full sm:w-auto px-8 py-4 brand-btn font-semibold text-center">💌 Email</a>
     </div>
-  </section>
+  </div>
+</section>
+
 
   <!-- BOOKING SECTION -->
   <section id="booking" class="py-16">
@@ -155,13 +119,9 @@
         </div>
 
         <div id="booking-actions" class="mt-4 flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center lg:justify-start">
-          <button type="button" id="send-wa" class="px-5 py-3 green-btn text-center w-full sm:w-auto">
-            📲 Send via WhatsApp
-          </button>
-          <button type="button" id="send-email" class="px-5 py-3 bg-indigo-500 text-white rounded-lg shadow hover:bg-indigo-600 text-center w-full sm:w-auto">
-            💌 Send via Email
-          </button>
-          <button type="reset" class="px-4 py-2 border rounded w-full sm:w-auto">Clear</button>
+          <button type="button" id="send-wa" class="px-5 py-3 wa-btn text-center w-full sm:w-auto">📲 Send via WhatsApp</button>
+          <button type="button" id="send-email" class="px-5 py-3 brand-btn text-center w-full sm:w-auto">💌 Send via Email</button>
+          <button type="reset" class="px-4 py-2 secondary-btn w-full sm:w-auto">Clear</button>
         </div>
 
         <p class="text-xs text-gray-500 mt-3 text-center lg:text-left">
@@ -171,8 +131,8 @@
     </div>
   </section>
 
-  <!-- TESTIMONIALS SECTION -->
-  <section id="testimonials" class="py-16 bg-gradient-to-r from-white to-gray-50">
+  <!-- TESTIMONIALS -->
+  <section id="testimonials" class="py-16 bg-gray-50">
     <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
       <h2 class="text-2xl font-bold mb-6 text-center lg:text-left">What customers say</h2>
       <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
@@ -199,13 +159,12 @@
     </div>
   </footer>
 
-  <!-- SCRIPTS -->
+  <!-- SCRIPT -->
   <script>
     const EMAIL = "bookings@aeroride.com";
     const WA_PHONE = "447594261537";
     const isMobile = /iPhone|iPad|iPod|Android|Windows Phone/i.test(navigator.userAgent);
 
-    // Elements
     const bookingForm = document.getElementById("bookingForm");
     const sendWaBtn = document.getElementById("send-wa");
     const sendEmailBtn = document.getElementById("send-email");
@@ -219,12 +178,8 @@
     const emailBtnMobile = document.getElementById("email-link-mobile");
     const heroEmailBtn = document.getElementById("hero-email");
 
-    // Helpers
-    const buildWhatsAppLink = (msg) =>
-      `https://wa.me/${WA_PHONE}?text=${encodeURIComponent(msg)}`;
-
-    const buildEmailLink = (subject, body) =>
-      `mailto:${EMAIL}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+    const buildWhatsAppLink = (msg) => `https://wa.me/${WA_PHONE}?text=${encodeURIComponent(msg)}`;
+    const buildEmailLink = (subject, body) => `mailto:${EMAIL}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
 
     const buildMessage = () => {
       const form = Object.fromEntries(new FormData(bookingForm).entries());
