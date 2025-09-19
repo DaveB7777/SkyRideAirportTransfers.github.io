@@ -48,6 +48,10 @@
         </div>
 
         <div class="flex items-center space-x-3">
+          <!-- Email + WhatsApp buttons -->
+          <a id="email-link" target="_blank" rel="noreferrer" class="hidden md:inline-flex items-center px-4 py-2 text-sm bg-indigo-500 text-white rounded-lg shadow hover:bg-indigo-600">
+            Email Us
+          </a>
           <a id="wa-link" target="_blank" rel="noreferrer" class="hidden md:inline-flex items-center px-4 py-2 text-sm green-btn">
             WhatsApp
           </a>
@@ -65,73 +69,63 @@
 
     <!-- Mobile Menu -->
     <div id="mobile-menu" class="hidden md:hidden absolute top-16 left-0 w-full bg-white shadow-md z-30 flex flex-col items-center space-y-4 py-4 transition-transform duration-300">
-      <a href="#home" class="menu-link opacity-0 translate-y-4 hover:text-indigo-600">Home</a>
-      <a href="#services" class="menu-link opacity-0 translate-y-4 hover:text-indigo-600">Services</a>
-      <a href="#fleet" class="menu-link opacity-0 translate-y-4 hover:text-indigo-600">Fleet</a>
-      <a href="#booking" class="menu-link opacity-0 translate-y-4 hover:text-indigo-600">Booking</a>
-      <a href="#contact" class="menu-link opacity-0 translate-y-4 hover:text-indigo-600">Contact</a>
-      <a id="wa-link-mobile" target="_blank" rel="noreferrer" class="menu-link opacity-0 translate-y-4 px-4 py-2 w-3/4 text-center green-btn">
+      <a href="#home" class="menu-link hover:text-indigo-600">Home</a>
+      <a href="#services" class="menu-link hover:text-indigo-600">Services</a>
+      <a href="#fleet" class="menu-link hover:text-indigo-600">Fleet</a>
+      <a href="#booking" class="menu-link hover:text-indigo-600">Booking</a>
+      <a href="#contact" class="menu-link hover:text-indigo-600">Contact</a>
+      <a id="email-link-mobile" target="_blank" rel="noreferrer" class="px-4 py-2 w-3/4 text-center bg-indigo-500 text-white rounded-lg shadow hover:bg-indigo-600">
+        Email Us
+      </a>
+      <a id="wa-link-mobile" target="_blank" rel="noreferrer" class="px-4 py-2 w-3/4 text-center green-btn">
         WhatsApp
       </a>
-      <a href="tel:+447594261537" class="menu-link opacity-0 translate-y-4 px-4 py-2 w-3/4 text-center green-btn">
+      <a href="tel:+447594261537" class="px-4 py-2 w-3/4 text-center green-btn">
         Call Now
       </a>
     </div>
   </header>
 
-<a href="tel:+447594261537" 
-   id="floating-call-btn"
-   class="fixed bottom-4 right-4 bg-gradient-to-r from-orange-500 to-orange-600 text-white p-5 rounded-full shadow-2xl z-50 flex items-center justify-center hover:from-orange-600 hover:to-orange-700 md:hidden transition-transform duration-300 text-lg">
+  <!-- Floating Call Button -->
+  <a href="tel:+447594261537" 
+    id="floating-call-btn"
+    class="fixed bottom-4 right-4 bg-gradient-to-r from-orange-500 to-orange-600 text-white p-5 rounded-full shadow-2xl z-50 flex items-center justify-center hover:from-orange-600 hover:to-orange-700 md:hidden transition-transform duration-300 text-lg">
     📞
-</a>
-	
+  </a>
+
   <!-- HERO SECTION -->
   <section id="home" class="bg-indigo-600 bg-gradient-to-r from-indigo-600 to-indigo-500 text-white py-16 sm:py-20">
     <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col lg:flex-row items-center gap-10">
       <div class="w-full lg:w-1/2 text-center lg:text-left">
-     <!-- Hero Text -->
-<h1 class="text-3xl sm:text-4xl md:text-5xl font-extrabold leading-tight">
-  Reliable airport transfers — on time, every time
-</h1>
-<p class="mt-4 text-lg opacity-90 leading-relaxed">
-  Private cars, professional drivers, flight monitoring and door-to-door service. Book in seconds via phone or WhatsApp.
-</p>
+        <h1 class="text-3xl sm:text-4xl md:text-5xl font-extrabold leading-tight">
+          Reliable airport transfers — on time, every time
+        </h1>
+        <p class="mt-4 text-lg opacity-90 leading-relaxed">
+          Private cars, professional drivers, flight monitoring and door-to-door service. Book in seconds via phone, WhatsApp, or email.
+        </p>
 
-<!-- Buttons Container -->
-<div class="mt-12 sm:mt-8 flex flex-col sm:flex-row gap-4">
-  <!-- Book Now button (orange) -->
-  <a href="#booking" 
-     class="w-full sm:w-auto px-8 py-4 bg-gradient-to-r from-orange-500 to-orange-600 text-white font-semibold rounded-lg shadow-lg hover:scale-105 transition-transform duration-300 text-center">
-    Book Now
-  </a>
-
-<!-- Message Us button (solid green, no shadow) -->
-<a id="hero-wa" 
-   target="_blank" 
-   rel="noreferrer" 
-   class="w-full sm:w-auto px-8 py-4 bg-green-500 text-white font-semibold rounded-lg hover:bg-green-600 transition-colors duration-300 text-center">
-  💬 Message Us
-</a>
-
-</div>
-
-
-        <div class="mt-6 grid grid-cols-2 sm:grid-cols-3 gap-3 text-sm text-center sm:text-left justify-center lg:justify-start">
-          <div class="bg-white/10 rounded p-3">Flight monitoring</div>
-          <div class="bg-white/10 rounded p-3">Fixed fares</div>
-          <div class="bg-white/10 rounded p-3">24/7 support</div>
-		  <div class="bg-white/10 rounded p-3">Card payments</div>
+        <!-- Hero Buttons -->
+        <div class="mt-12 sm:mt-8 flex flex-col sm:flex-row gap-4">
+          <a href="#booking" class="w-full sm:w-auto px-8 py-4 bg-gradient-to-r from-orange-500 to-orange-600 text-white font-semibold rounded-lg shadow-lg hover:scale-105 transition-transform duration-300 text-center">
+            Book Now
+          </a>
+          <a id="hero-wa" target="_blank" rel="noreferrer" class="w-full sm:w-auto px-8 py-4 green-btn text-center">
+            💬 WhatsApp
+          </a>
+          <a id="hero-email" target="_blank" rel="noreferrer" class="w-full sm:w-auto px-8 py-4 bg-indigo-500 text-white font-semibold rounded-lg shadow hover:bg-indigo-600 text-center">
+            💌 Email
+          </a>
         </div>
       </div>
 
-      <!-- Image hidden on mobile -->
-      <div class="w-full lg:w-1/2 mt-8 lg:mt-0 hidden sm:block">
+      <!-- Hero Image -->
+      <div class="w-full lg:w-3/4 mt-8 lg:mt-0 sm:block">
         <div class="rounded-xl overflow-hidden shadow-lg bg-white">
           <img src="images/hero.jpg" alt="airport transfer" class="w-full h-64 sm:h-80 md:h-96 object-cover" loading="lazy" />
           <div class="p-6">
             <h3 class="text-lg font-semibold">Door-to-door transfers</h3>
             <p class="mt-2 text-sm text-gray-600 leading-relaxed">
-              Comfortable vehicles, punctual drivers, and easy communication through WhatsApp for every booking.
+              Comfortable vehicles, punctual drivers, and easy communication through WhatsApp or email for every booking.
             </p>
           </div>
         </div>
@@ -139,36 +133,12 @@
     </div>
   </section>
 
-  <!-- FLEET SECTION -->
- <!-- <section id="fleet" class="py-16 bg-gray-100">
-    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-      <h2 class="text-2xl font-bold mb-6 text-center lg:text-left">Our Fleet</h2>
-      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-        <div class="bg-white rounded-lg overflow-hidden shadow p-4 flex flex-col items-center sm:items-start">
-          <img src="images/sedan.jpg" alt="Executive Sedan" class="hidden sm:block w-full h-44 object-cover rounded" />
-          <h4 class="font-semibold mt-3 text-center sm:text-left">Executive Sedan</h4>
-          <p class="text-sm text-gray-600 mt-1 text-center sm:text-left">Seats up to 3 passengers • Spacious luggage space</p>
-        </div>
-        <div class="bg-white rounded-lg overflow-hidden shadow p-4 flex flex-col items-center sm:items-start">
-          <img src="images/suv.jpg" alt="Luxury SUV" class="hidden sm:block w-full h-44 object-cover rounded" />
-          <h4 class="font-semibold mt-3 text-center sm:text-left">Luxury SUV</h4>
-          <p class="text-sm text-gray-600 mt-1 text-center sm:text-left">Seats up to 5 passengers • Premium comfort</p>
-        </div>
-        <div class="bg-white rounded-lg overflow-hidden shadow p-4 flex flex-col items-center sm:items-start">
-          <img src="images/minivan.jpg" alt="Minivan" class="hidden sm:block w-full h-44 object-cover rounded" />
-          <h4 class="font-semibold mt-3 text-center sm:text-left">Minivan</h4>
-          <p class="text-sm text-gray-600 mt-1 text-center sm:text-left">Seats up to 7 passengers • Ideal for families</p>
-        </div>
-      </div>
-    </div>
-  </section> -->
-
   <!-- BOOKING SECTION -->
   <section id="booking" class="py-16">
     <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-      <h2 class="text-2xl font-bold mb-4 text-center lg:text-left">Book your transfer (via WhatsApp)</h2>
+      <h2 class="text-2xl font-bold mb-4 text-center lg:text-left">Book your transfer</h2>
       <p class="text-sm text-gray-600 mb-6 text-center lg:text-left">
-        Fill the details and we'll open WhatsApp with a ready-made message.
+        Fill the details and choose how to send your request.
       </p>
 
       <form id="bookingForm" class="bg-white p-6 rounded-lg shadow">
@@ -184,13 +154,18 @@
           <textarea name="notes" placeholder="Additional notes (optional)" class="p-3 border rounded md:col-span-2 w-full" rows="3"></textarea>
         </div>
 
-        <div class="mt-4 flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center lg:justify-start">
-          <button type="submit" class="px-5 py-3 green-btn text-center w-full sm:w-auto">Send via WhatsApp</button>
+        <div id="booking-actions" class="mt-4 flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center lg:justify-start">
+          <button type="button" id="send-wa" class="px-5 py-3 green-btn text-center w-full sm:w-auto">
+            📲 Send via WhatsApp
+          </button>
+          <button type="button" id="send-email" class="px-5 py-3 bg-indigo-500 text-white rounded-lg shadow hover:bg-indigo-600 text-center w-full sm:w-auto">
+            💌 Send via Email
+          </button>
           <button type="reset" class="px-4 py-2 border rounded w-full sm:w-auto">Clear</button>
         </div>
 
         <p class="text-xs text-gray-500 mt-3 text-center lg:text-left">
-          By sending a WhatsApp message you agree to share these details with AeroRide for booking and communication.
+          By sending a message you agree to share these details with AeroRide for booking and communication.
         </p>
       </form>
     </div>
@@ -226,61 +201,86 @@
 
   <!-- SCRIPTS -->
   <script>
+    const EMAIL = "bookings@aeroride.com";
     const WA_PHONE = "447594261537";
+    const isMobile = /iPhone|iPad|iPod|Android|Windows Phone/i.test(navigator.userAgent);
 
-    // WhatsApp links
-    document.getElementById("wa-link").href = `https://wa.me/${WA_PHONE}`;
-    document.getElementById("wa-link-mobile").href = `https://wa.me/${WA_PHONE}`;
-    document.getElementById("hero-wa").href = `https://wa.me/${WA_PHONE}?text=${encodeURIComponent("Hello! I would like to book an airport transfer.")}`;
+    // Elements
+    const bookingForm = document.getElementById("bookingForm");
+    const sendWaBtn = document.getElementById("send-wa");
+    const sendEmailBtn = document.getElementById("send-email");
+    const actionsContainer = document.getElementById("booking-actions");
 
-    // Booking form
-    document.getElementById("bookingForm")?.addEventListener("submit", function (e) {
-      e.preventDefault();
-      const form = Object.fromEntries(new FormData(this).entries());
-      const message = `Booking request from *${form.name || "Guest"}*\n` +
-        `Phone: ${form.phone || "N/A"}\n` +
-        `Pickup: ${form.pickup}\n` +
-        `Dropoff: ${form.dropoff}\n` +
-        `Date: ${form.date} ${form.time}\n` +
-        `Passengers: ${form.passengers}\n` +
-        (form.flight ? `Flight: ${form.flight}\n` : "") +
-        (form.notes ? `Notes: ${form.notes}\n` : "") +
-        `\nPlease confirm availability and price.`;
-      const url = `https://wa.me/${WA_PHONE}?text=${encodeURIComponent(message)}`;
-      window.open(url, "_blank");
+    const waBtn = document.getElementById("wa-link");
+    const waBtnMobile = document.getElementById("wa-link-mobile");
+    const heroWaBtn = document.getElementById("hero-wa");
+
+    const emailBtn = document.getElementById("email-link");
+    const emailBtnMobile = document.getElementById("email-link-mobile");
+    const heroEmailBtn = document.getElementById("hero-email");
+
+    // Helpers
+    const buildWhatsAppLink = (msg) =>
+      `https://wa.me/${WA_PHONE}?text=${encodeURIComponent(msg)}`;
+
+    const buildEmailLink = (subject, body) =>
+      `mailto:${EMAIL}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+
+    const buildMessage = () => {
+      const form = Object.fromEntries(new FormData(bookingForm).entries());
+      return {
+        subject: `Booking Request from ${form.name || "Guest"}`,
+        body:
+          `Booking request:\n\n` +
+          `Name: ${form.name}\n` +
+          `Phone: ${form.phone}\n` +
+          `Pickup: ${form.pickup}\n` +
+          `Dropoff: ${form.dropoff}\n` +
+          `Date: ${form.date} ${form.time}\n` +
+          `Passengers: ${form.passengers}\n` +
+          (form.flight ? `Flight: ${form.flight}\n` : "") +
+          (form.notes ? `Notes: ${form.notes}\n` : ""),
+        wa:
+          `Booking request from *${form.name || "Guest"}*\n` +
+          `Phone: ${form.phone || "N/A"}\n` +
+          `Pickup: ${form.pickup}\n` +
+          `Dropoff: ${form.dropoff}\n` +
+          `Date: ${form.date} ${form.time}\n` +
+          `Passengers: ${form.passengers}\n` +
+          (form.flight ? `Flight: ${form.flight}\n` : "") +
+          (form.notes ? `Notes: ${form.notes}\n` : "")
+      };
+    };
+
+    // Init links
+    waBtn.href = buildWhatsAppLink();
+    waBtnMobile.href = buildWhatsAppLink();
+    heroWaBtn.href = buildWhatsAppLink();
+    emailBtn.href = buildEmailLink();
+    emailBtnMobile.href = buildEmailLink();
+    heroEmailBtn.href = buildEmailLink();
+
+    // WhatsApp send
+    sendWaBtn?.addEventListener("click", () => {
+      const { wa } = buildMessage();
+      window.open(buildWhatsAppLink(wa), "_blank");
     });
+
+    // Email send
+    sendEmailBtn?.addEventListener("click", () => {
+      const { subject, body } = buildMessage();
+      window.location.href = buildEmailLink(subject, body);
+    });
+
+    // Reorder booking buttons
+    if (isMobile) {
+      actionsContainer.insertBefore(sendWaBtn, actionsContainer.firstChild);
+    } else {
+      actionsContainer.insertBefore(sendEmailBtn, actionsContainer.firstChild);
+    }
 
     // Footer year
     document.getElementById("year").textContent = new Date().getFullYear();
-
-    // Mobile menu toggle with animation
-    const menuBtn = document.getElementById('mobile-menu-btn');
-    const mobileMenu = document.getElementById('mobile-menu');
-    const menuLinks = document.querySelectorAll('.menu-link');
-
-    menuBtn.addEventListener('click', () => {
-      mobileMenu.classList.toggle('hidden');
-      if (!mobileMenu.classList.contains('hidden')) {
-        menuLinks.forEach((link, i) => {
-          link.style.transition = `opacity 0.3s ease ${i*0.05}s, transform 0.3s ease ${i*0.05}s`;
-          link.classList.remove('opacity-0','translate-y-4');
-        });
-      } else {
-        menuLinks.forEach(link => {
-          link.style.transition = '';
-          link.classList.add('opacity-0','translate-y-4');
-        });
-      }
-    });
   </script>
 </body>
 </html>
-
-
-
-
-
-
-
-
-
