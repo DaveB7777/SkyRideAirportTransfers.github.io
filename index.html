@@ -6,9 +6,7 @@
   <title>AeroRide - Airport Transfers</title>
   <script src="https://cdn.tailwindcss.com"></script>
   <style>
-    html {
-      scroll-behavior: smooth; /* enables smooth scroll */
-    }
+    html { scroll-behavior: smooth; }
   </style>
 </head>
 <body class="min-h-screen font-sans text-gray-800 bg-gray-50">
@@ -88,6 +86,20 @@
           </svg>
           Book via Email
         </a>
+
+        <!-- Call Now -->
+        <a href="tel:+447594261537"
+           class="px-8 py-4 bg-blue-600 hover:bg-blue-700 text-white rounded-lg shadow-lg text-lg font-semibold flex items-center justify-center gap-2 transform hover:scale-105 hover:shadow-xl transition">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24" class="w-6 h-6">
+            <path d="M6.62 10.79a15.09 15.09 0 006.59 6.59l2.2-2.2a1 
+                     1 0 011.01-.24c1.12.37 2.33.57 3.58.57a1 
+                     1 0 011 1v3.5a1 1 0 01-1 1C10.3 21.01 
+                     3 13.71 3 5.5a1 1 0 011-1H7.5a1 1 
+                     0 011 1c0 1.25.2 2.46.57 3.59a1 
+                     1 0 01-.24 1.01l-2.2 2.2z"/>
+          </svg>
+          Call Now
+        </a>
       </div>
     </div>
   </section>
@@ -97,7 +109,6 @@
     <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
       <h2 class="text-2xl font-bold mb-4 text-center lg:text-left">Book your transfer</h2>
       <form id="bookingForm" class="bg-white p-6 rounded-lg shadow">
-        <!-- Fields -->
         <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
           <input required name="name" placeholder="Full name" class="p-3 border rounded w-full" />
           <input required name="phone" placeholder="Contact phone" class="p-3 border rounded w-full" />
@@ -110,7 +121,7 @@
           <textarea name="notes" placeholder="Additional notes (optional)" class="p-3 border rounded md:col-span-2 w-full" rows="3"></textarea>
         </div>
 
-        <!-- Buttons -->
+        <!-- Booking Buttons -->
         <div class="mt-4 flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center lg:justify-start">
           <button type="button" id="send-wa"
                   class="px-8 py-4 bg-green-600 hover:bg-green-700 text-white rounded-lg shadow-lg text-lg font-semibold flex items-center justify-center gap-2 transform hover:scale-105 hover:shadow-xl transition w-full sm:w-auto">
@@ -187,14 +198,6 @@
     sendEmailBtn.addEventListener("click", () => {
       const { subject, body } = buildMessage();
       window.location.href = buildEmailLink(subject, body);
-    });
-
-    // Focus booking form when hero buttons are clicked
-    document.getElementById("hero-wa").addEventListener("click", () => {
-      setTimeout(() => bookingForm.scrollIntoView({behavior: "smooth"}), 100);
-    });
-    document.getElementById("hero-email").addEventListener("click", () => {
-      setTimeout(() => bookingForm.scrollIntoView({behavior: "smooth"}), 100);
     });
   </script>
 </body>
