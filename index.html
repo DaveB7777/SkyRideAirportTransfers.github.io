@@ -244,85 +244,91 @@
   </footer>
 
   <!-- SCRIPT -->
-  <script>
-    const EMAIL = "bookings@aeroride.com";
-    const WA_PHONE = "447594261537";
-    const isMobile = /iPhone|iPad|iPod|Android|Windows Phone/i.test(navigator.userAgent);
+<script>
+  const EMAIL = "bookings@aeroride.com";
+  const WA_PHONE = "447594261537";
+  const isMobile = /iPhone|iPad|iPod|Android|Windows Phone/i.test(navigator.userAgent);
 
-    const bookingForm = document.getElementById("bookingForm");
-    const sendWaBtn = document.getElementById("send-wa");
-    const sendEmailBtn = document.getElementById("send-email");
-    const actionsContainer = document.getElementById("booking-actions");
+  const bookingForm = document.getElementById("bookingForm");
+  const sendWaBtn = document.getElementById("send-wa");
+  const sendEmailBtn = document.getElementById("send-email");
+  const actionsContainer = document.getElementById("booking-actions");
 
-    const waBtn = document.getElementById("wa-link");
-    const waBtnMobile = document.getElementById("wa-link-mobile");
-    const heroWaBtn = document.getElementById("hero-wa");
+  const waBtn = document.getElementById("wa-link");
+  const waBtnMobile = document.getElementById("wa-link-mobile");
+  const heroWaBtn = document.getElementById("hero-wa");
 
-    const emailBtn = document.getElementById("email-link");
-    const emailBtnMobile = document.getElementById("email-link-mobile");
-    const heroEmailBtn = document.getElementById("hero-email");
+  const emailBtn = document.getElementById("email-link");
+  const emailBtnMobile = document.getElementById("email-link-mobile");
+  const heroEmailBtn = document.getElementById("hero-email");
 
-    const buildWhatsAppLink = (msg) => `https://wa.me/${WA_PHONE}?text=${encodeURIComponent(msg)}`;
-    const buildEmailLink = (subject, body) => `mailto:${EMAIL}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+  // 🔹 Builders
+  const buildWhatsAppLink = (msg = "") => `https://wa.me/${WA_PHONE}?text=${encodeURIComponent(msg)}`;
+  const buildEmailLink = (subject = "AeroRide Booking", body = "") =>
+    `mailto:${EMAIL}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
 
-    const buildMessage = () => {
-      const form = Object.fromEntries(new FormData(bookingForm).entries());
-      return {
-        subject: `Booking Request from ${form.name || "Guest"}`,
-        body:
-          `Booking request:\n\n` +
-          `Name: ${form.name}\n` +
-          `Phone: ${form.phone}\n` +
-          `Pickup: ${form.pickup}\n` +
-          `Dropoff: ${form.dropoff}\n` +
-          `Date: ${form.date} ${form.time}\n` +
-          `Passengers: ${form.passengers}\n` +
-          (form.flight ? `Flight: ${form.flight}\n` : "") +
-          (form.notes ? `Notes: ${form.notes}\n` : ""),
-        wa:
-          `Booking request from *${form.name || "Guest"}*\n` +
-          `Phone: ${form.phone || "N/A"}\n` +
-          `Pickup: ${form.pickup}\n` +
-          `Dropoff: ${form.dropoff}\n` +
-          `Date: ${form.date} ${form.time}\n` +
-          `Passengers: ${form.passengers}\n` +
-          (form.flight ? `Flight: ${form.flight}\n` : "") +
-          (form.notes ? `Notes: ${form.notes}\n` : "")
-      };
+  // 🔹 Booking form message builder
+  const buildMessage = () => {
+    const form = Object.fromEntries(new FormData(bookingForm).entries());
+    return {
+      subject: `Booking Request from ${form.name || "Guest"}`,
+      body:
+        `Booking request:\n\n` +
+        `Name: ${form.name || ""}\n` +
+        `Phone: ${form.phone || ""}\n` +
+        `Pickup: ${form.pickup || ""}\n` +
+        `Dropoff: ${form.dropoff || ""}\n` +
+        `Date: ${form.date || ""} ${form.time || ""}\n` +
+        `Passengers: ${form.passengers || ""}\n` +
+        (form.flight ? `Flight: ${form.flight}\n` : "") +
+        (form.notes ? `Notes: ${form.notes}\n` : ""),
+      wa:
+        `Booking request from *${form.name || "Guest"}*\n` +
+        `Phone: ${form.phone || "N/A"}\n` +
+        `Pickup: ${form.pickup || ""}\n` +
+        `Dropoff: ${form.dropoff || ""}\n` +
+        `Date: ${form.date || ""} ${form.time || ""}\n` +
+        `Passengers: ${form.passengers || ""}\n` +
+        (form.flight ? `Flight: ${form.flight}\n` : "") +
+        (form.notes ? `Notes: ${form.notes}\n` : "")
     };
+  };
 
-    // Init links
-    waBtn.href = buildWhatsAppLink();
-    waBtnMobile.href = buildWhatsAppLink();
-    heroWaBtn.href = buildWhatsAppLink();
-    emailBtn.href = buildEmailLink();
-    emailBtnMobile.href = buildEmailLink();
-    heroEmailBtn.href = buildEmailLink();
+  // 🔹 Init static links (hero + header + mobile)
+  waBtn.href = buildWhatsAppLink("Hello, I’d like to book an airport transfer.");
+  waBtnMobile.href = buildWhatsAppLink("Hello, I’d like to book an airport transfer.");
+  heroWaBtn.href = buildWhatsAppLink("Hello, I’d like to book an airport transfer.");
 
-    // WhatsApp send
-    sendWaBtn?.addEventListener("click", () => {
-      const { wa } = buildMessage();
-      window.open(buildWhatsAppLink(wa), "_blank");
-    });
+  emailBtn.href = buildEmailLink("Airport Transfer Booking", "Hello, I’d like to book a transfer.");
+  emailBtnMobile.href = buildEmailLink("Airport Transfer Booking", "Hello, I’d like to book a transfer.");
+  heroEmailBtn.href = buildEmailLink("Airport Transfer Booking", "Hello, I’d like to book a transfer.");
 
-    // Email send
-    sendEmailBtn?.addEventListener("click", () => {
-      const { subject, body } = buildMessage();
-      window.location.href = buildEmailLink(subject, body);
-    });
+  // 🔹 Booking form WhatsApp send
+  sendWaBtn?.addEventListener("click", () => {
+    const { wa } = buildMessage();
+    window.open(buildWhatsAppLink(wa), "_blank");
+  });
 
-    // Reorder booking buttons
-    if (isMobile) {
-      actionsContainer.insertBefore(sendWaBtn, actionsContainer.firstChild);
-    } else {
-      actionsContainer.insertBefore(sendEmailBtn, actionsContainer.firstChild);
-    }
+  // 🔹 Booking form Email send
+  sendEmailBtn?.addEventListener("click", () => {
+    const { subject, body } = buildMessage();
+    window.location.href = buildEmailLink(subject, body);
+  });
 
-    // Footer year
-    document.getElementById("year").textContent = new Date().getFullYear();
-  </script>
+  // 🔹 Reorder booking buttons on mobile/desktop
+  if (isMobile) {
+    actionsContainer.insertBefore(sendWaBtn, actionsContainer.firstChild);
+  } else {
+    actionsContainer.insertBefore(sendEmailBtn, actionsContainer.firstChild);
+  }
+
+  // 🔹 Footer year
+  document.getElementById("year").textContent = new Date().getFullYear();
+</script>
+
 </body>
 </html>
+
 
 
 
