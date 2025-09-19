@@ -138,44 +138,62 @@
   <section id="booking" class="py-16">
     <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
       <h2 class="text-2xl font-bold mb-4 text-center lg:text-left">Book your transfer</h2>
-      <form id="bookingForm" class="bg-white p-6 rounded-lg shadow">
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-          <input required name="name" placeholder="Full name" class="p-3 border rounded w-full" />
-          <input required name="phone" placeholder="Contact phone" class="p-3 border rounded w-full" />
-          <input required name="pickup" placeholder="Pickup address / Airport" class="p-3 border rounded md:col-span-2 w-full" />
-          <input required name="dropoff" placeholder="Drop-off address / Hotel" class="p-3 border rounded md:col-span-2 w-full" />
-          <input required type="date" name="date" class="p-3 border rounded w-full" />
-          <input required type="time" name="time" class="p-3 border rounded w-full" />
-          <input required type="number" min="1" name="passengers" placeholder="Passengers" class="p-3 border rounded w-full" />
+<form id="bookingForm" class="bg-white p-6 rounded-lg shadow">
+  <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+    <input required name="name" placeholder="Full name" class="p-3 border rounded w-full" />
+    <input required name="phone" placeholder="Contact phone" class="p-3 border rounded w-full" />
+    <input required name="pickup" placeholder="Pickup address / Airport" class="p-3 border rounded md:col-span-2 w-full" />
+    <input required name="dropoff" placeholder="Drop-off address / Hotel" class="p-3 border rounded md:col-span-2 w-full" />
 
-          <select name="vehicle" required class="p-3 border rounded w-full">
-            <option value="">Select vehicle type</option>
-            <option value="Executive Sedan">Executive Sedan</option>
-            <option value="Luxury SUV">Luxury SUV</option>
-            <option value="Mercedes Vito Tourer">Mercedes Vito Tourer</option>
-          </select>
+    <!-- ✅ Date with icon -->
+    <div class="relative">
+      <input required type="date" name="date" class="p-3 pl-10 border rounded w-full" />
+      <span class="absolute left-3 top-1/2 -translate-y-1/2 text-gray-400">📅</span>
+    </div>
 
-          <select name="returnTrip" id="returnTrip" required class="p-3 border rounded w-full">
-            <option value="">Return trip?</option>
-            <option value="One-way">No (One-way)</option>
-            <option value="Return">Yes (Return Trip)</option>
-          </select>
+    <!-- ✅ Time with icon -->
+    <div class="relative">
+      <input required type="time" name="time" class="p-3 pl-10 border rounded w-full" />
+      <span class="absolute left-3 top-1/2 -translate-y-1/2 text-gray-400">⏰</span>
+    </div>
 
-          <!-- Hidden return fields -->
-          <div id="returnFields" class="hidden md:col-span-2 grid grid-cols-1 md:grid-cols-2 gap-4">
-            <input type="date" name="returnDate" id="returnDate" class="p-3 border rounded w-full" />
-            <input type="time" name="returnTime" id="returnTime" class="p-3 border rounded w-full" />
-          </div>
+    <input required type="number" min="1" name="passengers" placeholder="Passengers" class="p-3 border rounded w-full" />
 
-          <input name="flight" placeholder="Flight number (optional)" class="p-3 border rounded w-full md:col-span-2" />
-          <textarea name="notes" placeholder="Additional notes (optional)" class="p-3 border rounded md:col-span-2 w-full" rows="3"></textarea>
-        </div>
+    <select name="vehicle" required class="p-3 border rounded w-full">
+      <option value="">Select vehicle type</option>
+      <option value="Executive Sedan">Executive Sedan</option>
+      <option value="Luxury SUV">Luxury SUV</option>
+      <option value="Mercedes Vito Tourer">Mercedes Vito Tourer</option>
+    </select>
 
-        <div class="mt-4 flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center lg:justify-start">
-          <button type="button" id="send-wa" class="px-8 py-4 bg-green-600 hover:bg-green-700 text-white rounded-lg shadow-lg text-lg font-semibold w-full sm:w-auto">Send via WhatsApp</button>
-          <button type="button" id="send-email" class="px-8 py-4 bg-gray-700 hover:bg-gray-800 text-white rounded-lg shadow-lg text-lg font-semibold w-full sm:w-auto">Send via Email</button>
-        </div>
-      </form>
+    <select name="returnTrip" id="returnTrip" required class="p-3 border rounded w-full">
+      <option value="">Return trip?</option>
+      <option value="One-way">No (One-way)</option>
+      <option value="Return">Yes (Return Trip)</option>
+    </select>
+
+    <!-- ✅ Return fields with icons -->
+    <div id="returnFields" class="hidden md:col-span-2 grid grid-cols-1 md:grid-cols-2 gap-4">
+      <div class="relative">
+        <input type="date" name="returnDate" id="returnDate" class="p-3 pl-10 border rounded w-full" />
+        <span class="absolute left-3 top-1/2 -translate-y-1/2 text-gray-400">📅</span>
+      </div>
+      <div class="relative">
+        <input type="time" name="returnTime" id="returnTime" class="p-3 pl-10 border rounded w-full" />
+        <span class="absolute left-3 top-1/2 -translate-y-1/2 text-gray-400">⏰</span>
+      </div>
+    </div>
+
+    <input name="flight" placeholder="Flight number (optional)" class="p-3 border rounded w-full md:col-span-2" />
+    <textarea name="notes" placeholder="Additional notes (optional)" class="p-3 border rounded md:col-span-2 w-full" rows="3"></textarea>
+  </div>
+
+  <div class="mt-4 flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center lg:justify-start">
+    <button type="button" id="send-wa" class="px-8 py-4 bg-green-600 hover:bg-green-700 text-white rounded-lg shadow-lg text-lg font-semibold w-full sm:w-auto">Send via WhatsApp</button>
+    <button type="button" id="send-email" class="px-8 py-4 bg-gray-700 hover:bg-gray-800 text-white rounded-lg shadow-lg text-lg font-semibold w-full sm:w-auto">Send via Email</button>
+  </div>
+</form>
+
     </div>
   </section>
 
