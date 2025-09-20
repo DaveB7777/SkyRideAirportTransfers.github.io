@@ -10,8 +10,8 @@
   </style>
 
   <!-- ✅ SEO Meta Tags -->
-  <meta name="description" content="AeroRide provides reliable airport transfers in Warrington and surrounding areas. Executive cars, group transport, and private hire. Book instantly via WhatsApp, Email, or Call." />
-  <meta name="keywords" content="airport transfer Warrington, taxi Warrington, chauffeur Warrington, Manchester Airport transfers, Liverpool Airport transfers, AeroRide, private car hire" />
+  <meta name="description" content="AeroRide provides reliable airport transfers in Warrington and surrounding areas. Mercedes Vito Tourer group transport, private hire, and executive service. Book instantly via WhatsApp, Email, or Call." />
+  <meta name="keywords" content="airport transfer Warrington, taxi Warrington, chauffeur Warrington, Manchester Airport transfers, Liverpool Airport transfers, AeroRide, Mercedes Vito Tourer" />
   <meta name="author" content="AeroRide" />
   <meta property="og:title" content="AeroRide - Warrington Airport Transfers" />
   <meta property="og:description" content="Reliable airport transfers in Warrington and surrounding areas — On Time, Every Time. Book via WhatsApp, Email, or Call." />
@@ -51,7 +51,7 @@
     <nav id="mobile-menu" class="hidden md:hidden bg-gray-100 border-t px-4 py-3 space-y-3">
       <a href="#home" class="block hover:text-blue-900">Home</a>
       <a href="#services" class="block hover:text-blue-900">Services</a>
-      <a href="#" class="block hover:text-blue-900"></a>
+      <a href="#fleet" class="block hover:text-blue-900">Fleet</a>
       <a href="#booking" class="block hover:text-blue-900">Booking</a>
       <a href="#contact" class="block hover:text-blue-900">Contact</a>
       <a href="mailto:bookings@aeroride.com" class="block text-gray-700">Email Us</a>
@@ -79,7 +79,7 @@
       <h1 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-white">
         Reliable Airport Transfers — On Time, Every Time
       </h1>
-      <p class="text-lg text-gray-100 max-w-2xl">Private cars, professional drivers, flight monitoring and door-to-door service.</p>
+      <p class="text-lg text-gray-100 max-w-2xl">Mercedes Vito Tourer with professional drivers, flight monitoring and door-to-door service.</p>
       <p class="text-md text-gray-200 max-w-xl">Book in seconds via phone, WhatsApp, or email.</p>
 
       <div class="flex flex-col sm:flex-row gap-4 mt-6">
@@ -111,21 +111,21 @@
     </div>
   </section>
 
-<!-- FLEET -->
-<section id="fleet" class="py-16 bg-gray-50">
-  <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-    <h2 class="text-3xl font-bold text-center mb-10">Our Fleet</h2>
-    <div class="grid grid-cols-1 md:grid-cols-1 gap-8">
-      <div class="bg-white rounded-lg shadow overflow-hidden">
-        <img src="images/fleet-van.jpg" alt="Mercedes Vito Tourer" class="w-full h-48 object-cover" loading="lazy">
-        <div class="p-4">
-          <h3 class="font-semibold text-lg">Mercedes Vito Tourer</h3>
-          <p class="text-gray-600 text-sm">Perfect for families and groups with up to 8 passengers.</p>
+  <!-- FLEET -->
+  <section id="fleet" class="py-16 bg-gray-50">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+      <h2 class="text-3xl font-bold text-center mb-10">Our Fleet</h2>
+      <div class="grid grid-cols-1 md:grid-cols-1 gap-8">
+        <div class="bg-white rounded-lg shadow overflow-hidden">
+          <img src="images/fleet-van.jpg" alt="Mercedes Vito Tourer" class="w-full h-48 object-cover" loading="lazy">
+          <div class="p-4">
+            <h3 class="font-semibold text-lg">Mercedes Vito Tourer</h3>
+            <p class="text-gray-600 text-sm">Perfect for families and groups with up to 8 passengers.</p>
+          </div>
         </div>
       </div>
     </div>
-  </div>
-</section>
+  </section>
 
   <!-- BOOKING -->
   <section id="booking" class="py-16">
@@ -148,7 +148,7 @@
             <span class="absolute left-3 top-1/2 -translate-y-1/2 text-gray-400">⏰</span>
           </div>
 
-          <input required type="number" min="1" name="passengers" placeholder="Passengers" class="p-3 border rounded w-full" />
+          <input required type="number" min="1" max="8" name="passengers" placeholder="Passengers (max 8)" class="p-3 border rounded w-full" />
 
           <select name="returnTrip" id="returnTrip" required class="p-3 border rounded w-full">
             <option value="">Return trip?</option>
@@ -191,7 +191,7 @@
       <div class="space-y-6">
         <div class="bg-white p-5 rounded-lg shadow">
           <h3 class="font-semibold text-lg mb-2">How much is a Warrington to Manchester Airport transfer?</h3>
-          <p class="text-gray-600">Prices vary depending on vehicle type and passenger numbers, but transfers from Warrington to Manchester Airport typically start from around £45–£60.</p>
+          <p class="text-gray-600">Prices vary depending on passenger numbers, but transfers from Warrington to Manchester Airport typically start from around £45–£60.</p>
         </div>
         <div class="bg-white p-5 rounded-lg shadow">
           <h3 class="font-semibold text-lg mb-2">Do you cover Liverpool Airport as well?</h3>
@@ -226,82 +226,6 @@
   <!-- ✅ reCAPTCHA script -->
   <script src="https://www.google.com/recaptcha/api.js" async defer></script>
 
-  <!-- ✅ FAQ Schema -->
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "FAQPage",
-    "mainEntity": [
-      {
-        "@type": "Question",
-        "name": "How much is a Warrington to Manchester Airport transfer?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Transfers from Warrington to Manchester Airport typically start from around £45–£60, depending on vehicle type and passenger numbers."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "Do you cover Liverpool Airport as well?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Yes, we provide reliable transfers to and from Liverpool John Lennon Airport as well as Manchester Airport and other UK airports."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "Can I book a return trip?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Yes, you can book a one-way or a return transfer directly using our booking form or via WhatsApp or Email."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "Do you monitor flights?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Yes, our drivers track live flight information to ensure on-time pickups, even if your flight is delayed."
-        }
-      }
-    ]
-  }
-  </script>
-
-  <!-- ✅ LocalBusiness Schema -->
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "TaxiService",
-    "name": "AeroRide",
-    "image": "https://www.aeroride.com/images/hero-vito-dusk-1920.jpg",
-    "@id": "https://www.aeroride.com",
-    "url": "https://www.aeroride.com",
-    "telephone": "+44 7594 261537",
-    "priceRange": "££",
-    "address": {
-      "@type": "PostalAddress",
-      "addressLocality": "Warrington",
-      "addressRegion": "Cheshire",
-      "addressCountry": "UK"
-    },
-    "areaServed": {
-      "@type": "GeoCircle",
-      "geoMidpoint": {
-        "@type": "GeoCoordinates",
-        "latitude": 53.3915,
-        "longitude": -2.5979
-      },
-      "geoRadius": 30000
-    },
-    "sameAs": [
-      "https://wa.me/447594261537",
-      "mailto:bookings@aeroride.com"
-    ],
-    "description": "AeroRide provides reliable airport transfers in Warrington and surrounding areas. Executive cars, group transport, and private hire with professional drivers."
-  }
-  </script>
-
   <!-- ✅ Custom Script -->
   <script>
   document.addEventListener("DOMContentLoaded", () => {
@@ -320,6 +244,8 @@
     // Build message
     const buildMessage = () => {
       const form = Object.fromEntries(new FormData(bookingForm).entries());
+      const vehicle = "Mercedes Vito Tourer"; // default vehicle
+
       return {
         subject: `Booking Request from ${form.name || "Guest"}`,
         body: `Booking request:\n\n` +
@@ -329,7 +255,7 @@
               `Dropoff: ${form.dropoff}\n` +
               `Date: ${form.date} ${form.time}\n` +
               `Passengers: ${form.passengers}\n` +
-              `Vehicle: ${form.vehicle}\n` +
+              `Vehicle: ${vehicle}\n` +
               `Return Trip: ${form.returnTrip}\n` +
               (form.returnTrip === "Return" ? `Return Date: ${form.returnDate} ${form.returnTime}\n` : "") +
               (form.flight ? `Flight: ${form.flight}\n` : "") +
@@ -340,7 +266,7 @@
             `Dropoff: ${form.dropoff}\n` +
             `Date: ${form.date} ${form.time}\n` +
             `Passengers: ${form.passengers}\n` +
-            `Vehicle: ${form.vehicle}\n` +
+            `Vehicle: ${vehicle}\n` +
             `Return Trip: ${form.returnTrip}\n` +
             (form.returnTrip === "Return" ? `Return Date: ${form.returnDate} ${form.returnTime}\n` : "") +
             (form.flight ? `Flight: ${form.flight}\n` : "") +
@@ -355,8 +281,7 @@
       if (!form.phone.match(/^[+0-9\s-]{7,15}$/)) { alert("Please enter a valid phone number."); return false; }
       if (!form.pickup || !form.dropoff) { alert("Pickup and dropoff are required."); return false; }
       if (!form.date || !form.time) { alert("Please select a valid date and time."); return false; }
-      if (form.passengers < 1) { alert("Please enter number of passengers."); return false; }
-      if (!form.vehicle) { alert("Please select a vehicle type."); return false; }
+      if (form.passengers < 1 || form.passengers > 8) { alert("Please enter passengers (1–8)."); return false; }
       if (!form.returnTrip) { alert("Please select if this is a return trip."); return false; }
       if (form.returnTrip === "Return" && (!form.returnDate || !form.returnTime)) {
         alert("Please provide return date and time."); return false;
@@ -405,4 +330,3 @@
   </script>
 </body>
 </html>
-
