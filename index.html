@@ -145,13 +145,11 @@
           <input required name="pickup" placeholder="Pickup address / Airport" class="p-3 border rounded md:col-span-2 w-full" />
           <input required name="dropoff" placeholder="Drop-off address / Hotel" class="p-3 border rounded md:col-span-2 w-full" />
 
-          <!-- ✅ Date with icon -->
           <div class="relative">
             <input required type="date" name="date" class="p-3 pl-10 border rounded w-full" />
             <span class="absolute left-3 top-1/2 -translate-y-1/2 text-gray-400">📅</span>
           </div>
 
-          <!-- ✅ Time with icon -->
           <div class="relative">
             <input required type="time" name="time" class="p-3 pl-10 border rounded w-full" />
             <span class="absolute left-3 top-1/2 -translate-y-1/2 text-gray-400">⏰</span>
@@ -172,7 +170,6 @@
             <option value="Return">Yes (Return Trip)</option>
           </select>
 
-          <!-- ✅ Return fields with icons -->
           <div id="returnFields" class="hidden md:col-span-2 grid grid-cols-1 md:grid-cols-2 gap-4">
             <div class="relative">
               <input type="date" name="returnDate" id="returnDate" class="p-3 pl-10 border rounded w-full" />
@@ -188,10 +185,8 @@
           <textarea name="notes" placeholder="Additional notes (optional)" class="p-3 border rounded md:col-span-2 w-full" rows="3"></textarea>
         </div>
 
-        <!-- ✅ Google reCAPTCHA -->
-        <div class="mt-4">
-          <div class="g-recaptcha" data-sitekey="YOUR_SITE_KEY"></div>
-        </div>
+        <!-- ✅ Invisible reCAPTCHA -->
+        <div id="recaptcha-container"></div>
 
         <div class="mt-4 flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center lg:justify-start">
           <button type="button" id="send-wa" class="px-8 py-4 bg-green-600 hover:bg-green-700 text-white rounded-lg shadow-lg text-lg font-semibold w-full sm:w-auto">Send via WhatsApp</button>
@@ -216,9 +211,24 @@
   </footer>
 
   <!-- ✅ reCAPTCHA script -->
-  <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+  <script src="https://www.google.com/recaptcha/api.js?onload=onloadCallback&render=explicit" async defer></script>
 
   <script>
+  let recaptchaWidgetId;
+
+  function onloadCallback() {
+    recaptchaWidgetId = grecaptcha.render('recaptcha-container', {
+      'sitekey': 'YOUR_SITE_KEY', // 🔑 replace with your Invisible reCAPTCHA v2 site key
+      'size': 'invisible'
+    });
+  }
+
+  const executeRecaptcha = (callback) => {
+    grecaptcha.execute(recaptchaWidgetId).then((token) => {
+      callback(token);
+    });
+  };
+
   document.addEventListener("DOMContentLoaded", () => {
     document.getElementById("year").textContent = new Date().getFullYear();
 
@@ -263,7 +273,7 @@
       };
     };
 
-    // Validate form + reCAPTCHA
+    // Validate form (without visible captcha)
     const validateForm = () => {
       const form = Object.fromEntries(new FormData(bookingForm).entries());
       if (!form.name || form.name.length < 2) { alert("Please enter your full name."); return false; }
@@ -276,22 +286,23 @@
       if (form.returnTrip === "Return" && (!form.returnDate || !form.returnTime)) {
         alert("Please provide return date and time."); return false;
       }
-      if (grecaptcha.getResponse().length === 0) {
-        alert("Please verify you are not a robot."); return false;
-      }
       return true;
     };
 
     sendWaBtn.addEventListener("click", () => {
       if (!validateForm()) return;
-      const { wa } = buildMessage();
-      window.open(buildWhatsAppLink(wa), "_blank");
+      executeRecaptcha(() => {
+        const { wa } = buildMessage();
+        window.open(buildWhatsAppLink(wa), "_blank");
+      });
     });
 
     sendEmailBtn.addEventListener("click", () => {
       if (!validateForm()) return;
-      const { subject, body } = buildMessage();
-      window.location.href = buildEmailLink(subject, body);
+      executeRecaptcha(() => {
+        const { subject, body } = buildMessage();
+        window.location.href = buildEmailLink(subject, body);
+      });
     });
 
     // ✅ Mobile menu toggle
