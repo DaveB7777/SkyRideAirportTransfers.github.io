@@ -40,9 +40,6 @@
 
         <!-- CTA + Hamburger -->
         <div class="flex items-center space-x-3">
-          <span class="hidden md:inline-flex items-center px-4 py-2 text-sm text-blue-900 font-semibold">
-            +44 7594 261537
-          </span>
           <a href="#booking" class="hidden md:inline-flex items-center px-4 py-2 text-sm bg-gray-700 text-white rounded-lg shadow hover:bg-gray-800 transition">Email Us</a>
           <a href="#booking" class="hidden md:inline-flex items-center px-4 py-2 text-sm bg-green-600 text-white rounded-lg shadow hover:bg-green-700 transition">WhatsApp</a>
           <button id="menu-toggle" class="md:hidden text-2xl text-gray-700 focus:outline-none" aria-label="Menu">☰</button>
@@ -62,7 +59,7 @@
     </nav>
   </header>
 
-  <!-- Floating Call Button (Mobile only) -->
+  <!-- Floating Call Button -->
   <a href="tel:+447594261537"
      class="fixed bottom-4 right-4 bg-blue-600 p-5 rounded-full shadow hover:bg-blue-700 md:hidden transition-colors flex items-center justify-center"
      aria-label="Call AeroRide">
@@ -88,6 +85,7 @@
       <div class="flex flex-col sm:flex-row gap-4 mt-6">
         <a href="#booking" class="px-4 py-2 sm:px-6 sm:py-3 lg:px-8 lg:py-4 bg-green-600 hover:bg-green-700 text-white rounded-lg shadow-lg text-base sm:text-lg font-semibold transform hover:scale-105 hover:shadow-xl transition">Book via WhatsApp</a>
         <a href="#booking" class="px-4 py-2 sm:px-6 sm:py-3 lg:px-8 lg:py-4 bg-gray-700 hover:bg-gray-800 text-white rounded-lg shadow-lg text-base sm:text-lg font-semibold transform hover:scale-105 hover:shadow-xl transition">Book via Email</a>
+        <a href="tel:+447594261537" class="px-4 py-2 sm:px-6 sm:py-3 lg:px-8 lg:py-4 bg-blue-600 hover:bg-blue-700 text-white rounded-lg shadow-lg text-base sm:text-lg font-semibold transform hover:scale-105 hover:shadow-xl transition">Call Now</a>
       </div>
     </div>
   </section>
@@ -113,26 +111,26 @@
     </div>
   </section>
 
-  <!-- FLEET -->
-  <section id="fleet" class="py-16 bg-gray-50">
-    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-      <h2 class="text-3xl font-bold text-center mb-10">Our Fleet</h2>
-      <div class="grid grid-cols-1 md:grid-cols-1 gap-8">
-        <div class="bg-white rounded-lg shadow overflow-hidden">
-          <div class="overflow-hidden">
-            <img src="images/fleet-van.jpg" 
-                 alt="Mercedes Vito Tourer" 
-                 class="w-full aspect-[4/3] md:aspect-[5/4] object-cover transform transition-transform duration-500 hover:scale-105" 
-                 loading="lazy">
-          </div>
-          <div class="p-4">
-            <h3 class="font-semibold text-lg">Mercedes Vito Tourer</h3>
-            <p class="text-gray-600 text-sm">Perfect for families and groups with up to 8 passengers.</p>
-          </div>
+<!-- FLEET -->
+<section id="fleet" class="py-16 bg-gray-50">
+  <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+    <h2 class="text-3xl font-bold text-center mb-10">Our Fleet</h2>
+    <div class="grid grid-cols-1 md:grid-cols-1 gap-8">
+      <div class="bg-white rounded-lg shadow overflow-hidden">
+        <div class="overflow-hidden">
+          <img src="images/fleet-van.jpg" 
+               alt="Mercedes Vito Tourer" 
+               class="w-full aspect-[4/3] object-cover transform transition-transform duration-500 hover:scale-105" 
+               loading="lazy">
+        </div>
+        <div class="p-4">
+          <h3 class="font-semibold text-lg">Mercedes Vito Tourer</h3>
+          <p class="text-gray-600 text-sm">Perfect for families and groups with up to 8 passengers.</p>
         </div>
       </div>
     </div>
-  </section>
+  </div>
+</section>
 
   <!-- BOOKING -->
   <section id="booking" class="py-16">
@@ -226,7 +224,6 @@
     </div>
   </section>
 
-  <!-- FOOTER -->
   <footer class="bg-white border-t py-6 text-center text-sm text-gray-600">
     © <span id="year"></span> AeroRide. All rights reserved.
   </footer>
