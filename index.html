@@ -5,7 +5,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>AeroRide - Airport Transfers</title>
   <script src="https://cdn.tailwindcss.com"></script>
-  <style>html{scroll-behavior:smooth}</style>
+  <style>
+    html { scroll-behavior: smooth; }
+  </style>
 
   <!-- ✅ SEO Meta Tags -->
   <meta name="description" content="AeroRide offers reliable airport transfers, executive cars, and group transport. Book instantly via WhatsApp, Email, or Call." />
@@ -32,14 +34,17 @@
             <a href="#contact" class="hover:text-blue-900">Contact</a>
           </nav>
         </div>
+
+        <!-- CTA + Hamburger -->
         <div class="flex items-center space-x-3">
           <a href="#booking" class="hidden md:inline-flex items-center px-4 py-2 text-sm bg-gray-700 text-white rounded-lg shadow hover:bg-gray-800 transition">Email Us</a>
           <a href="#booking" class="hidden md:inline-flex items-center px-4 py-2 text-sm bg-green-600 text-white rounded-lg shadow hover:bg-green-700 transition">WhatsApp</a>
-          <button id="menu-toggle" class="md:hidden text-2xl text-gray-700 focus:outline-none">☰</button>
+          <button id="menu-toggle" class="md:hidden text-2xl text-gray-700 focus:outline-none" aria-label="Menu">☰</button>
         </div>
       </div>
     </div>
-    <!-- Mobile Menu -->
+
+    <!-- ✅ Mobile Menu -->
     <nav id="mobile-menu" class="hidden md:hidden bg-gray-100 border-t px-4 py-3 space-y-3">
       <a href="#home" class="block hover:text-blue-900">Home</a>
       <a href="#services" class="block hover:text-blue-900">Services</a>
@@ -52,26 +57,28 @@
   </header>
 
   <!-- Floating Call Button -->
-  <a href="tel:+447594261537" class="fixed bottom-4 right-4 bg-blue-600 text-white p-5 rounded-full shadow hover:bg-blue-700 md:hidden transition-colors" aria-label="Call AeroRide">
-    <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24" class="w-6 h-6"><path d="M6.62 10.79a15.09 15.09 0 006.59 6.59l2.2-2.2a1 1 0 011.01-.24c1.12.37 2.33.57 3.58.57a1 1 0 011 1v3.5a1 1 0 01-1 1C10.3 21.01 3 13.71 3 5.5a1 1 0 011-1H7.5a1 1 0 011 1c0 1.25.2 2.46.57 3.59a1 1 0 01-.24 1.01l-2.2 2.2z"/></svg>
-  </a>
+  <a href="tel:+447594261537"
+     class="fixed bottom-4 right-4 bg-blue-600 text-white p-5 rounded-full shadow hover:bg-blue-700 md:hidden transition-colors"
+     aria-label="Call AeroRide">📞</a>
 
-  <!-- HERO -->
+  <!-- HERO SECTION -->
   <section id="home" class="relative bg-transparent">
     <picture class="absolute inset-0 -z-10">
-      <source type="image/webp" srcset="images/hero-vito-dusk-1280.webp 1280w, images/hero-vito-dusk-1920.webp 1920w, images/hero-vito-dusk-2560.webp 2560w, images/hero-vito-dusk-3200.webp 3200w" sizes="100vw">
-      <source type="image/jpeg" srcset="images/hero-vito-dusk-1280.jpg 1280w, images/hero-vito-dusk-1920.jpg 1920w, images/hero-vito-dusk-2560.jpg 2560w, images/hero-vito-dusk-3200.jpg 3200w" sizes="100vw">
-      <img src="images/hero-vito-dusk-1920.jpg" alt="Black Mercedes Vito Tourer at airport" class="w-full h-full object-cover object-[70%_65%]" loading="eager" fetchpriority="high" width="1920" height="1080">
+      <img src="images/hero-vito-dusk-1920.jpg" alt="Black Mercedes Vito Tourer at airport" class="w-full h-full object-cover object-[70%_65%]" />
     </picture>
     <div class="absolute inset-0 bg-black/40 -z-0"></div>
+
     <div class="relative max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 min-h-[75svh] md:min-h-[85svh] flex flex-col items-center justify-center text-center space-y-6">
-      <h1 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-white">Reliable Airport Transfers — On Time, Every Time</h1>
+      <h1 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-white">
+        Reliable Airport Transfers — On Time, Every Time
+      </h1>
       <p class="text-lg text-gray-100 max-w-2xl">Private cars, professional drivers, flight monitoring and door-to-door service.</p>
       <p class="text-md text-gray-200 max-w-xl">Book in seconds via phone, WhatsApp, or email.</p>
+
       <div class="flex flex-col sm:flex-row gap-4 mt-6">
-        <a href="#booking" class="px-8 py-4 bg-green-600 hover:bg-green-700 text-white rounded-lg shadow-lg text-lg font-semibold flex items-center justify-center gap-2"><svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 448 512" class="w-6 h-6"><path d="M380.9 97.1C339-22.2 209.3-37.4 119.1 37.4c-90.3 75-105.5 204.6-30.7 294.9l-30.7 112.4 115-30.3c85.8 45.6 192.7 25.7 259.8-48.2 74.8-90.2 59.6-219.9-52.6-269.1z"/></svg>Book via WhatsApp</a>
-        <a href="#booking" class="px-8 py-4 bg-gray-700 hover:bg-gray-800 text-white rounded-lg shadow-lg text-lg font-semibold flex items-center justify-center gap-2"><svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24" class="w-6 h-6"><path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4-8 5-8-5V6l8 5 8-5v2z"/></svg>Book via Email</a>
-        <a href="tel:+447594261537" class="px-8 py-4 bg-blue-600 hover:bg-blue-700 text-white rounded-lg shadow-lg text-lg font-semibold flex items-center justify-center gap-2"><svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24" class="w-6 h-6"><path d="M6.62 10.79a15.09 15.09 0 006.59 6.59l2.2-2.2a1 1 0 011.01-.24c1.12.37 2.33.57 3.58.57a1 1 0 011 1v3.5a1 1 0 01-1 1C10.3 21.01 3 13.71 3 5.5a1 1 0 011-1H7.5a1 1 0 011 1c0 1.25.2 2.46.57 3.59a1 1 0 01-.24 1.01l-2.2 2.2z"/></svg>Call Now</a>
+        <a href="#booking" class="px-4 py-2 sm:px-6 sm:py-3 lg:px-8 lg:py-4 bg-green-600 hover:bg-green-700 text-white rounded-lg shadow-lg text-base sm:text-lg font-semibold transform hover:scale-105 hover:shadow-xl transition">Book via WhatsApp</a>
+        <a href="#booking" class="px-4 py-2 sm:px-6 sm:py-3 lg:px-8 lg:py-4 bg-gray-700 hover:bg-gray-800 text-white rounded-lg shadow-lg text-base sm:text-lg font-semibold transform hover:scale-105 hover:shadow-xl transition">Book via Email</a>
+        <a href="tel:+447594261537" class="px-4 py-2 sm:px-6 sm:py-3 lg:px-8 lg:py-4 bg-blue-600 hover:bg-blue-700 text-white rounded-lg shadow-lg text-base sm:text-lg font-semibold transform hover:scale-105 hover:shadow-xl transition">Call Now</a>
       </div>
     </div>
   </section>
@@ -81,9 +88,18 @@
     <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
       <h2 class="text-3xl font-bold text-center mb-10">Our Services</h2>
       <div class="grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
-        <div class="p-6 bg-gray-50 rounded-lg shadow"><h3 class="font-semibold text-lg mb-2">Airport Transfers</h3><p class="text-gray-600">Reliable transfers to and from all major airports, on time, every time.</p></div>
-        <div class="p-6 bg-gray-50 rounded-lg shadow"><h3 class="font-semibold text-lg mb-2">Corporate Travel</h3><p class="text-gray-600">Professional and discreet service for your business needs and VIP guests.</p></div>
-        <div class="p-6 bg-gray-50 rounded-lg shadow"><h3 class="font-semibold text-lg mb-2">Private Hire</h3><p class="text-gray-600">Door-to-door transport for events, day trips, or personal travel.</p></div>
+        <div class="p-6 bg-gray-50 rounded-lg shadow">
+          <h3 class="font-semibold text-lg mb-2">Airport Transfers</h3>
+          <p class="text-gray-600">Reliable transfers to and from all major airports, on time, every time.</p>
+        </div>
+        <div class="p-6 bg-gray-50 rounded-lg shadow">
+          <h3 class="font-semibold text-lg mb-2">Corporate Travel</h3>
+          <p class="text-gray-600">Professional and discreet service for your business needs and VIP guests.</p>
+        </div>
+        <div class="p-6 bg-gray-50 rounded-lg shadow">
+          <h3 class="font-semibold text-lg mb-2">Private Hire</h3>
+          <p class="text-gray-600">Door-to-door transport for events, day trips, or personal travel.</p>
+        </div>
       </div>
     </div>
   </section>
@@ -93,32 +109,26 @@
     <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
       <h2 class="text-3xl font-bold text-center mb-10">Our Fleet</h2>
       <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-        <!-- Sedan -->
         <div class="bg-white rounded-lg shadow overflow-hidden">
-          <picture>
-            <source type="image/webp" srcset="images/fleet-sedan-1280.webp 1280w, images/fleet-sedan-1920.webp 1920w, images/fleet-sedan-2560.webp 2560w, images/fleet-sedan-3200.webp 3200w" sizes="(max-width: 768px) 100vw, 33vw">
-            <source type="image/jpeg" srcset="images/fleet-sedan-1280.jpg 1280w, images/fleet-sedan-1920.jpg 1920w, images/fleet-sedan-2560.jpg 2560w, images/fleet-sedan-3200.jpg 3200w" sizes="(max-width: 768px) 100vw, 33vw">
-            <img src="images/fleet-sedan-1280.jpg" alt="Executive Sedan" class="w-full h-48 object-cover" loading="lazy" width="1280" height="853">
-          </picture>
-          <div class="p-4"><h3 class="font-semibold text-lg">Executive Sedan</h3><p class="text-gray-600 text-sm">Comfortable travel for up to 3 passengers with luggage.</p></div>
+          <img src="images/fleet-sedan.jpg" alt="Executive Sedan" class="w-full h-48 object-cover" loading="lazy">
+          <div class="p-4">
+            <h3 class="font-semibold text-lg">Executive Sedan</h3>
+            <p class="text-gray-600 text-sm">Comfortable travel for up to 3 passengers with luggage.</p>
+          </div>
         </div>
-        <!-- SUV -->
         <div class="bg-white rounded-lg shadow overflow-hidden">
-          <picture>
-            <source type="image/webp" srcset="images/fleet-suv-1280.webp 1280w, images/fleet-suv-1920.webp 1920w, images/fleet-suv-2560.webp 2560w, images/fleet-suv-3200.webp 3200w" sizes="(max-width: 768px) 100vw, 33vw">
-            <source type="image/jpeg" srcset="images/fleet-suv-1280.jpg 1280w, images/fleet-suv-1920.jpg 1920w, images/fleet-suv-2560.jpg 2560w, images/fleet-suv-3200.jpg 3200w" sizes="(max-width: 768px) 100vw, 33vw">
-            <img src="images/fleet-suv-1280.jpg" alt="Luxury SUV" class="w-full h-48 object-cover" loading="lazy" width="1280" height="853">
-          </picture>
-          <div class="p-4"><h3 class="font-semibold text-lg">Luxury SUV</h3><p class="text-gray-600 text-sm">Spacious seating with premium comfort for 4–5 passengers.</p></div>
+          <img src="images/fleet-suv.jpg" alt="Luxury SUV" class="w-full h-48 object-cover" loading="lazy">
+          <div class="p-4">
+            <h3 class="font-semibold text-lg">Luxury SUV</h3>
+            <p class="text-gray-600 text-sm">Spacious seating with premium comfort for 4–5 passengers.</p>
+          </div>
         </div>
-        <!-- Van -->
         <div class="bg-white rounded-lg shadow overflow-hidden">
-          <picture>
-            <source type="image/webp" srcset="images/fleet-van-1280.webp 1280w, images/fleet-van-1920.webp 1920w, images/fleet-van-2560.webp 2560w, images/fleet-van-3200.webp 3200w" sizes="(max-width: 768px) 100vw, 33vw">
-            <source type="image/jpeg" srcset="images/fleet-van-1280.jpg 1280w, images/fleet-van-1920.jpg 1920w, images/fleet-van-2560.jpg 2560w, images/fleet-van-3200.jpg 3200w" sizes="(max-width: 768px) 100vw, 33vw">
-            <img src="images/fleet-van-1280.jpg" alt="Mercedes Vito Tourer" class="w-full h-48 object-cover" loading="lazy" width="1280" height="853">
-          </picture>
-          <div class="p-4"><h3 class="font-semibold text-lg">Mercedes Vito Tourer</h3><p class="text-gray-600 text-sm">Perfect for families and groups with up to 7 passengers.</p></div>
+          <img src="images/fleet-van.jpg" alt="Mercedes Vito Tourer" class="w-full h-48 object-cover" loading="lazy">
+          <div class="p-4">
+            <h3 class="font-semibold text-lg">Mercedes Vito Tourer</h3>
+            <p class="text-gray-600 text-sm">Perfect for families and groups with up to 7 passengers.</p>
+          </div>
         </div>
       </div>
     </div>
@@ -131,25 +141,61 @@
       <form id="bookingForm" class="bg-white p-6 rounded-lg shadow">
         <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
           <input required name="name" placeholder="Full name" class="p-3 border rounded w-full" />
-          <input required name="phone" placeholder="Contact phone" class="p-3 border rounded w-full" />
+          <input required type="tel" name="phone" pattern="^\+?[0-9\s-]{7,15}$" placeholder="Contact phone" class="p-3 border rounded w-full" />
           <input required name="pickup" placeholder="Pickup address / Airport" class="p-3 border rounded md:col-span-2 w-full" />
           <input required name="dropoff" placeholder="Drop-off address / Hotel" class="p-3 border rounded md:col-span-2 w-full" />
-          <div class="relative"><input required type="date" name="date" class="p-3 pl-10 border rounded w-full" /><span class="absolute left-3 top-1/2 -translate-y-1/2 text-gray-400">📅</span></div>
-          <div class="relative"><input required type="time" name="time" class="p-3 pl-10 border rounded w-full" /><span class="absolute left-3 top-1/2 -translate-y-1/2 text-gray-400">⏰</span></div>
-          <input required type="number" min="1" name="passengers" placeholder="Passengers" class="p-3 border rounded w-full" />
-          <select name="vehicle" required class="p-3 border rounded w-full"><option value="">Select vehicle type</option><option>Executive Sedan</option><option>Luxury SUV</option><option>Mercedes Vito Tourer</option></select>
-          <select name="returnTrip" id="returnTrip" required class="p-3 border rounded w-full"><option value="">Return trip?</option><option value="One-way">No (One-way)</option><option value="Return">Yes (Return Trip)</option></select>
-          <!-- Return fields -->
-          <div id="returnFields" class="hidden md:col-span-2 grid grid-cols-1 md:grid-cols-2 gap-4">
-            <div class="relative"><input type="date" name="returnDate" id="returnDate" class="p-3 pl-10 border rounded w-full" /><span class="absolute left-3 top-1/2 -translate-y-1/2 text-gray-400">📅</span></div>
-            <div class="relative"><input type="time" name="returnTime" id="returnTime" class="p-3 pl-10 border rounded w-full" /><span class="absolute left-3 top-1/2 -translate-y-1/2 text-gray-400">⏰</span></div>
+
+          <!-- ✅ Date with icon -->
+          <div class="relative">
+            <input required type="date" name="date" class="p-3 pl-10 border rounded w-full" />
+            <span class="absolute left-3 top-1/2 -translate-y-1/2 text-gray-400">📅</span>
           </div>
-          <input name="flight" placeholder="Flight number (optional)" class="p-3 border rounded w-full" />
+
+          <!-- ✅ Time with icon -->
+          <div class="relative">
+            <input required type="time" name="time" class="p-3 pl-10 border rounded w-full" />
+            <span class="absolute left-3 top-1/2 -translate-y-1/2 text-gray-400">⏰</span>
+          </div>
+
+          <input required type="number" min="1" name="passengers" placeholder="Passengers" class="p-3 border rounded w-full" />
+
+          <select name="vehicle" required class="p-3 border rounded w-full">
+            <option value="">Select vehicle type</option>
+            <option value="Executive Sedan">Executive Sedan</option>
+            <option value="Luxury SUV">Luxury SUV</option>
+            <option value="Mercedes Vito Tourer">Mercedes Vito Tourer</option>
+          </select>
+
+          <select name="returnTrip" id="returnTrip" required class="p-3 border rounded w-full">
+            <option value="">Return trip?</option>
+            <option value="One-way">No (One-way)</option>
+            <option value="Return">Yes (Return Trip)</option>
+          </select>
+
+          <!-- ✅ Return fields with icons -->
+          <div id="returnFields" class="hidden md:col-span-2 grid grid-cols-1 md:grid-cols-2 gap-4">
+            <div class="relative">
+              <input type="date" name="returnDate" id="returnDate" class="p-3 pl-10 border rounded w-full" />
+              <span class="absolute left-3 top-1/2 -translate-y-1/2 text-gray-400">📅</span>
+            </div>
+            <div class="relative">
+              <input type="time" name="returnTime" id="returnTime" class="p-3 pl-10 border rounded w-full" />
+              <span class="absolute left-3 top-1/2 -translate-y-1/2 text-gray-400">⏰</span>
+            </div>
+          </div>
+
+          <input name="flight" placeholder="Flight number (optional)" class="p-3 border rounded w-full md:col-span-2" />
           <textarea name="notes" placeholder="Additional notes (optional)" class="p-3 border rounded md:col-span-2 w-full" rows="3"></textarea>
         </div>
+
+        <!-- ✅ Google reCAPTCHA -->
+        <div class="mt-4">
+          <div class="g-recaptcha" data-sitekey="YOUR_SITE_KEY"></div>
+        </div>
+
         <div class="mt-4 flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center lg:justify-start">
-          <button type="button" id="send-wa" class="px-8 py-4 bg-green-600 hover:bg-green-700 text-white rounded-lg shadow-lg text-lg font-semibold flex items-center justify-center gap-2"><svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 448 512" class="w-6 h-6"><path d="M380.9 97.1C339-22.2 209.3-37.4 119.1 37.4c-90.3 75-105.5 204.6-30.7 294.9z"/></svg>Send via WhatsApp</button>
-          <button type="button" id="send-email" class="px-8 py-4 bg-gray-700 hover:bg-gray-800 text-white rounded-lg shadow-lg text-lg font-semibold flex items-center justify-center gap-2"><svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24" class="w-6 h-6"><path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4-8 5-8-5V6l8 5 8-5v2z"/></svg>Send via Email</button>
+          <button type="button" id="send-wa" class="px-8 py-4 bg-green-600 hover:bg-green-700 text-white rounded-lg shadow-lg text-lg font-semibold w-full sm:w-auto">Send via WhatsApp</button>
+          <button type="button" id="send-email" class="px-8 py-4 bg-gray-700 hover:bg-gray-800 text-white rounded-lg shadow-lg text-lg font-semibold w-full sm:w-auto">Send via Email</button>
         </div>
       </form>
     </div>
@@ -165,11 +211,112 @@
     </div>
   </section>
 
-  <footer class="bg-white border-t py-6 text-center text-sm text-gray-600">© <span id="year"></span> AeroRide. All rights reserved.</footer>
+  <footer class="bg-white border-t py-6 text-center text-sm text-gray-600">
+    © <span id="year"></span> AeroRide. All rights reserved.
+  </footer>
 
-  <!-- ✅ Minified JS -->
+  <!-- ✅ reCAPTCHA script -->
+  <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+
   <script>
-  document.getElementById("year").textContent=new Date().getFullYear();const EMAIL="bookings@aeroride.com",WA_PHONE="447594261537",bookingForm=document.getElementById("bookingForm"),sendWaBtn=document.getElementById("send-wa"),sendEmailBtn=document.getElementById("send-email"),buildWhatsAppLink=e=>`https://wa.me/${WA_PHONE}?text=${encodeURIComponent(e)}`,buildEmailLink=(e,t)=>`mailto:${EMAIL}?subject=${encodeURIComponent(e)}&body=${encodeURIComponent(t)}`,buildMessage=()=>{const e=Object.fromEntries(new FormData(bookingForm).entries());return{subject:`Booking Request from ${e.name||"Guest"}`,body:`Booking request:\n\nName: ${e.name}\nPhone: ${e.phone}\nPickup: ${e.pickup}\nDropoff: ${e.dropoff}\nDate: ${e.date} ${e.time}\nPassengers: ${e.passengers}\nVehicle: ${e.vehicle||"Not specified"}\n${"Return"===e.returnTrip?`Return: ${e.returnDate} ${e.returnTime}\n`:""}${e.flight?`Flight: ${e.flight}\n`:""}${e.notes?`Notes: ${e.notes}\n`:""}`,wa:`Booking request from *${e.name||"Guest"}*\nPhone: ${e.phone||"N/A"}\nPickup: ${e.pickup}\nDropoff: ${e.dropoff}\nDate: ${e.date} ${e.time}\nPassengers: ${e.passengers}\nVehicle: ${e.vehicle||"Not specified"}\n${"Return"===e.returnTrip?`Return: ${e.returnDate} ${e.returnTime}\n`:""}${e.flight?`Flight: ${e.flight}\n`:""}${e.notes?`Notes: ${e.notes}\n`:""}`}},menuToggle=document.getElementById("menu-toggle"),mobileMenu=document.getElementById("mobile-menu"),returnTripSelect=document.getElementById("returnTrip"),returnFields=document.getElementById("returnFields"),returnDate=document.getElementById("returnDate"),returnTime=document.getElementById("returnTime");sendWaBtn.addEventListener("click",()=>{const{wa:e}=buildMessage();window.open(buildWhatsAppLink(e),"_blank")}),sendEmailBtn.addEventListener("click",()=>{const{subject:e,body:t}=buildMessage();window.location.href=buildEmailLink(e,t)}),menuToggle.addEventListener("click",()=>{mobileMenu.classList.toggle("hidden")}),returnTripSelect.addEventListener("change",()=>{"Return"===returnTripSelect.value?(returnFields.classList.remove("hidden"),returnDate.required=!0,returnTime.required=!0):(returnFields.classList.add("hidden"),returnDate.required=!1,returnTime.required=!1)});
+  document.addEventListener("DOMContentLoaded", () => {
+    document.getElementById("year").textContent = new Date().getFullYear();
+
+    const EMAIL = "bookings@aeroride.com";
+    const WA_PHONE = "447594261537";
+    const bookingForm = document.getElementById("bookingForm");
+
+    const sendWaBtn = document.getElementById("send-wa");
+    const sendEmailBtn = document.getElementById("send-email");
+
+    const buildWhatsAppLink = (msg) => `https://wa.me/${WA_PHONE}?text=${encodeURIComponent(msg)}`;
+    const buildEmailLink = (subject, body) => `mailto:${EMAIL}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+
+    // Build message
+    const buildMessage = () => {
+      const form = Object.fromEntries(new FormData(bookingForm).entries());
+      return {
+        subject: `Booking Request from ${form.name || "Guest"}`,
+        body: `Booking request:\n\n` +
+              `Name: ${form.name}\n` +
+              `Phone: ${form.phone}\n` +
+              `Pickup: ${form.pickup}\n` +
+              `Dropoff: ${form.dropoff}\n` +
+              `Date: ${form.date} ${form.time}\n` +
+              `Passengers: ${form.passengers}\n` +
+              `Vehicle: ${form.vehicle}\n` +
+              `Return Trip: ${form.returnTrip}\n` +
+              (form.returnTrip === "Return" ? `Return Date: ${form.returnDate} ${form.returnTime}\n` : "") +
+              (form.flight ? `Flight: ${form.flight}\n` : "") +
+              (form.notes ? `Notes: ${form.notes}\n` : ""),
+        wa: `Booking request from *${form.name || "Guest"}*\n` +
+            `Phone: ${form.phone || "N/A"}\n` +
+            `Pickup: ${form.pickup}\n` +
+            `Dropoff: ${form.dropoff}\n` +
+            `Date: ${form.date} ${form.time}\n` +
+            `Passengers: ${form.passengers}\n` +
+            `Vehicle: ${form.vehicle}\n` +
+            `Return Trip: ${form.returnTrip}\n` +
+            (form.returnTrip === "Return" ? `Return Date: ${form.returnDate} ${form.returnTime}\n` : "") +
+            (form.flight ? `Flight: ${form.flight}\n` : "") +
+            (form.notes ? `Notes: ${form.notes}\n` : "")
+      };
+    };
+
+    // Validate form + reCAPTCHA
+    const validateForm = () => {
+      const form = Object.fromEntries(new FormData(bookingForm).entries());
+      if (!form.name || form.name.length < 2) { alert("Please enter your full name."); return false; }
+      if (!form.phone.match(/^[+0-9\s-]{7,15}$/)) { alert("Please enter a valid phone number."); return false; }
+      if (!form.pickup || !form.dropoff) { alert("Pickup and dropoff are required."); return false; }
+      if (!form.date || !form.time) { alert("Please select a valid date and time."); return false; }
+      if (form.passengers < 1) { alert("Please enter number of passengers."); return false; }
+      if (!form.vehicle) { alert("Please select a vehicle type."); return false; }
+      if (!form.returnTrip) { alert("Please select if this is a return trip."); return false; }
+      if (form.returnTrip === "Return" && (!form.returnDate || !form.returnTime)) {
+        alert("Please provide return date and time."); return false;
+      }
+      if (grecaptcha.getResponse().length === 0) {
+        alert("Please verify you are not a robot."); return false;
+      }
+      return true;
+    };
+
+    sendWaBtn.addEventListener("click", () => {
+      if (!validateForm()) return;
+      const { wa } = buildMessage();
+      window.open(buildWhatsAppLink(wa), "_blank");
+    });
+
+    sendEmailBtn.addEventListener("click", () => {
+      if (!validateForm()) return;
+      const { subject, body } = buildMessage();
+      window.location.href = buildEmailLink(subject, body);
+    });
+
+    // ✅ Mobile menu toggle
+    const menuToggle = document.getElementById("menu-toggle");
+    const mobileMenu = document.getElementById("mobile-menu");
+    menuToggle.addEventListener("click", () => {
+      mobileMenu.classList.toggle("hidden");
+    });
+
+    // ✅ Show/hide return fields
+    const returnTripSelect = document.getElementById("returnTrip");
+    const returnFields = document.getElementById("returnFields");
+    returnTripSelect.addEventListener("change", () => {
+      if (returnTripSelect.value === "Return") {
+        returnFields.classList.remove("hidden");
+      } else {
+        returnFields.classList.add("hidden");
+      }
+    });
+
+    // ✅ Prevent past dates
+    const today = new Date().toISOString().split("T")[0];
+    document.querySelector('input[name="date"]').setAttribute("min", today);
+    document.getElementById("returnDate").setAttribute("min", today);
+  });
   </script>
 </body>
 </html>
