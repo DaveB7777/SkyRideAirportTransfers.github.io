@@ -3,36 +3,44 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>AeroRide - Airport Transfers Warrington | Manchester & Liverpool</title>
+  <title>AeroRide - Family-Friendly Airport Transfers | Warrington, Manchester & Liverpool</title>
   <script src="https://cdn.tailwindcss.com"></script>
   <style>
     html { scroll-behavior: smooth; }
   </style>
 
   <!-- ✅ SEO Meta Tags -->
-  <meta name="description" content="AeroRide offers reliable airport transfers in Warrington, Manchester, Liverpool & surrounding areas. Private Mercedes Vito Tourer for up to 8 passengers. Book via WhatsApp, Email, or Call." />
-  <meta name="keywords" content="airport transfer Warrington, taxi Warrington, chauffeur Warrington, Manchester Airport transfers, Liverpool Airport transfers, AeroRide, Mercedes Vito Tourer, private car hire" />
+  <meta name="description" content="AeroRide provides family-friendly and reliable airport transfers in Warrington, Manchester & Liverpool. Spacious Mercedes Vito Tourer for families and groups up to 8 passengers. Book by WhatsApp, Email, or Call." />
+  <meta name="keywords" content="family airport transfer Warrington, group taxi Warrington, family chauffeur Warrington, Manchester Airport transfers, Liverpool Airport transfers, AeroRide, Mercedes Vito Tourer, private family car hire" />
   <meta name="author" content="AeroRide" />
 
   <!-- ✅ Open Graph -->
-  <meta property="og:title" content="AeroRide - Airport Transfers Warrington, Manchester & Liverpool" />
-  <meta property="og:description" content="Reliable airport transfers in Warrington and surrounding areas — On Time, Every Time. Book via WhatsApp, Email, or Call." />
+  <meta property="og:title" content="AeroRide - Family-Friendly Airport Transfers" />
+  <meta property="og:description" content="Stress-free transfers for families & groups — plenty of space for kids, luggage & prams. Serving Warrington, Manchester & Liverpool." />
   <meta property="og:image" content="https://www.aeroride.com/images/hero-vito-dusk-1920.jpg" />
   <meta property="og:url" content="https://www.aeroride.com" />
   <meta property="og:type" content="website" />
 
   <!-- ✅ Twitter Card -->
   <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="AeroRide - Airport Transfers Warrington | Manchester & Liverpool" />
-  <meta name="twitter:description" content="Reliable transfers to Manchester & Liverpool Airports. Book via WhatsApp, Email, or Call." />
+  <meta name="twitter:title" content="AeroRide - Family-Friendly Airport Transfers" />
+  <meta name="twitter:description" content="Comfortable airport transfers for families and groups. Book quickly via WhatsApp, Email, or Call." />
   <meta name="twitter:image" content="https://www.aeroride.com/images/hero-vito-dusk-1920.jpg" />
 
-  <!-- ✅ FAQ Schema -->
+  <!-- ✅ Schema Markup -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
     "@type": "FAQPage",
     "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "Do you provide child seats?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes, child seats and boosters are available free of charge. Please request when booking."
+        }
+      },
       {
         "@type": "Question",
         "name": "How much is a Warrington to Manchester Airport transfer?",
@@ -56,20 +64,11 @@
           "@type": "Answer",
           "text": "Yes, you can book a one-way or a return transfer directly using our booking form or via WhatsApp or Email."
         }
-      },
-      {
-        "@type": "Question",
-        "name": "Do you monitor flights?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Yes, our drivers track live flight information to ensure on-time pickups, even if your flight is delayed."
-        }
       }
     ]
   }
   </script>
 
-  <!-- ✅ LocalBusiness Schema -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -104,11 +103,10 @@
       "https://wa.me/447594261537",
       "mailto:bookings@aeroride.com"
     ],
-    "description": "AeroRide provides reliable airport transfers in Warrington, Manchester, Liverpool and surrounding areas with Mercedes Vito Tourers for up to 8 passengers."
+    "description": "AeroRide provides reliable, family-friendly airport transfers in Warrington, Manchester, Liverpool and surrounding areas with Mercedes Vito Tourers for up to 8 passengers."
   }
   </script>
 
-  <!-- ✅ Vehicle Schema -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -125,7 +123,7 @@
       "value": 8
     },
     "image": "https://www.aeroride.com/images/fleet-van.jpg",
-    "description": "Spacious Mercedes Vito Tourer ideal for airport transfers, families, and groups of up to 8 passengers.",
+    "description": "Spacious Mercedes Vito Tourer ideal for airport transfers, family holidays, and group journeys of up to 8 passengers.",
     "offers": {
       "@type": "Offer",
       "priceCurrency": "GBP",
@@ -150,20 +148,21 @@
         <div class="flex items-center space-x-3">
           <div class="flex flex-col leading-tight">
             <span class="text-2xl font-extrabold text-blue-900">AeroRide</span>
-            <span class="text-xs text-gray-600">Warrington &amp; surrounding areas</span>
+            <span class="text-xs text-gray-600">Family & Group Transfers</span>
           </div>
           <nav class="hidden md:flex items-center space-x-6 text-sm text-gray-600">
             <a href="#home" class="hover:text-blue-900">Home</a>
             <a href="#services" class="hover:text-blue-900">Services</a>
             <a href="#fleet" class="hover:text-blue-900">Fleet</a>
             <a href="#booking" class="hover:text-blue-900">Booking</a>
+            <a href="#faq" class="hover:text-blue-900">FAQ</a>
             <a href="#contact" class="hover:text-blue-900">Contact</a>
           </nav>
         </div>
         <div class="flex items-center space-x-3">
-          <a href="#booking" aria-label="Book by Email" class="hidden md:inline-flex items-center px-4 py-2 text-sm bg-gray-700 text-white rounded-lg shadow hover:bg-gray-800 transition">Email Us</a>
-          <a href="#booking" aria-label="Book via WhatsApp" class="hidden md:inline-flex items-center px-4 py-2 text-sm bg-green-600 text-white rounded-lg shadow hover:bg-green-700 transition">WhatsApp</a>
-          <button id="menu-toggle" class="md:hidden text-2xl text-gray-700 focus:outline-none" aria-label="Menu">☰</button>
+          <a href="#booking" class="hidden md:inline-flex items-center px-4 py-2 text-sm bg-gray-700 text-white rounded-lg shadow hover:bg-gray-800 transition">Email Us</a>
+          <a href="#booking" class="hidden md:inline-flex items-center px-4 py-2 text-sm bg-green-600 text-white rounded-lg shadow hover:bg-green-700 transition">WhatsApp</a>
+          <button id="menu-toggle" class="md:hidden text-2xl text-gray-700 focus:outline-none">☰</button>
         </div>
       </div>
     </div>
@@ -172,6 +171,7 @@
       <a href="#services" class="block hover:text-blue-900">Services</a>
       <a href="#fleet" class="block hover:text-blue-900">Fleet</a>
       <a href="#booking" class="block hover:text-blue-900">Booking</a>
+      <a href="#faq" class="block hover:text-blue-900">FAQ</a>
       <a href="#contact" class="block hover:text-blue-900">Contact</a>
       <a href="mailto:bookings@aeroride.com" class="block text-gray-700">Email Us</a>
       <a href="https://wa.me/447594261537" target="_blank" class="block text-green-700">WhatsApp</a>
@@ -188,13 +188,13 @@
   <!-- HERO -->
   <section id="home" class="relative bg-transparent">
     <picture class="absolute inset-0 -z-10">
-      <img src="images/hero-vito-dusk-1920.jpg" alt="Black Mercedes Vito Tourer at airport" class="w-full h-full object-cover object-[70%_65%]" loading="eager" width="1920" height="1080" />
+      <img src="images/hero-vito-dusk-1920.jpg" alt="Mercedes Vito Tourer at airport ready for a family trip" class="w-full h-full object-cover object-[70%_65%]" loading="eager" width="1920" height="1080" />
     </picture>
     <div class="absolute inset-0 bg-black/40 -z-0"></div>
     <div class="relative max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 min-h-[75svh] md:min-h-[85svh] flex flex-col items-center justify-center text-center space-y-6">
-      <h1 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-white">Reliable Airport Transfers — On Time, Every Time</h1>
-      <p class="text-lg text-gray-100 max-w-2xl">Private cars, professional drivers, flight monitoring and door-to-door service.</p>
-      <p class="text-md text-gray-200 max-w-xl">Book in seconds via phone, WhatsApp, or email.</p>
+      <h1 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-white">Stress-Free Airport Transfers 👨‍👩‍👧‍👦✈️</h1>
+      <p class="text-lg text-gray-100 max-w-2xl">Plenty of room for kids, prams, and luggage — with child seats available on request.</p>
+      <p class="text-md text-gray-200 max-w-xl">Book in seconds via WhatsApp, Email, or phone call.</p>
       <div class="flex flex-col sm:flex-row gap-4 mt-6">
         <a href="#booking" class="px-4 py-2 sm:px-6 sm:py-3 lg:px-8 lg:py-4 bg-green-600 hover:bg-green-700 text-white rounded-lg shadow-lg text-base sm:text-lg font-semibold transform hover:scale-105 hover:shadow-xl transition">
           Book via WhatsApp
@@ -202,12 +202,10 @@
         <a href="#booking" class="px-4 py-2 sm:px-6 sm:py-3 lg:px-8 lg:py-4 bg-gray-700 hover:bg-gray-800 text-white rounded-lg shadow-lg text-base sm:text-lg font-semibold transform hover:scale-105 hover:shadow-xl transition">
           Book via Email
         </a>
-
         <!-- Desktop / Tablet: Non-clickable Call Text -->
         <span class="hidden md:inline-block px-4 py-2 sm:px-6 sm:py-3 lg:px-8 lg:py-4 bg-blue-600 text-white rounded-lg shadow-lg text-base sm:text-lg font-semibold">
           Call Now on 07594 261537
         </span>
-
         <!-- Mobile: Clickable Call Button -->
         <a href="tel:+447594261537" class="md:hidden px-4 py-2 sm:px-6 sm:py-3 lg:px-8 lg:py-4 bg-blue-600 hover:bg-blue-700 text-white rounded-lg shadow-lg text-base sm:text-lg font-semibold transform hover:scale-105 hover:shadow-xl transition">
           Call Now
@@ -219,19 +217,19 @@
   <!-- SERVICES -->
   <section id="services" class="py-16 bg-white">
     <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-      <h2 class="text-3xl font-bold text-center mb-10">Our Services</h2>
+      <h2 class="text-3xl font-bold text-center mb-10">Our Friendly Services 💙</h2>
       <div class="grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
         <div class="p-6 bg-gray-50 rounded-lg shadow">
-          <h3 class="font-semibold text-lg mb-2">Airport Transfers</h3>
-          <p class="text-gray-600">Reliable transfers to and from all major airports, on time, every time.</p>
+          <h3 class="font-semibold text-lg mb-2">Airport Transfers ✈️</h3>
+          <p class="text-gray-600">Relax knowing we’ll get you to the airport on time — perfect for holidays, family trips, and business travel.</p>
         </div>
         <div class="p-6 bg-gray-50 rounded-lg shadow">
-          <h3 class="font-semibold text-lg mb-2">Corporate Travel</h3>
-          <p class="text-gray-600">Professional and discreet service for your business needs and VIP guests.</p>
+          <h3 class="font-semibold text-lg mb-2">Family & Group Travel 👨‍👩‍👧‍👦</h3>
+          <p class="text-gray-600">Room for up to 8 passengers, child seats on request, and space for prams & luggage.</p>
         </div>
         <div class="p-6 bg-gray-50 rounded-lg shadow">
-          <h3 class="font-semibold text-lg mb-2">Private Hire</h3>
-          <p class="text-gray-600">Door-to-door transport for events, day trips, or personal travel.</p>
+          <h3 class="font-semibold text-lg mb-2">Day Trips & Events 🎉</h3>
+          <p class="text-gray-600">From weddings to theme parks, we’ll get your family or group there together, safely and comfortably.</p>
         </div>
       </div>
     </div>
@@ -240,15 +238,14 @@
   <!-- FLEET -->
   <section id="fleet" class="py-16 bg-gray-50">
     <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-      <h2 class="text-3xl font-bold text-center mb-10">Our Fleet</h2>
-      <div class="grid grid-cols-1 md:grid-cols-1 gap-8">
+      <h2 class="text-3xl font-bold text-center mb-10">Our Family-Friendly Vehicle 🚐</h2>
+      <div class="grid grid-cols-1 gap-8">
         <div class="bg-white rounded-lg shadow overflow-hidden">
-          <div class="overflow-hidden">
-            <img src="images/fleet-van.jpg" alt="Mercedes Vito Tourer" class="w-full aspect-[4/3] object-cover transform transition-transform duration-500 hover:scale-105" loading="lazy" width="1200" height="900">
-          </div>
+          <img src="images/fleet-van.jpg" alt="Mercedes Vito Tourer - perfect for family and group airport transfers" class="w-full aspect-[4/3] object-cover transform transition-transform duration-500 hover:scale-105" loading="lazy" width="1200" height="900">
           <div class="p-4">
             <h3 class="font-semibold text-lg">Mercedes Vito Tourer</h3>
-            <p class="text-gray-600 text-sm">Perfect for families and groups with up to 8 passengers.</p>
+            <p class="text-gray-600 text-sm">Comfortable seating for up to 8 passengers — ideal for families, holidays, and groups.</p>
+            <p class="text-gray-600 text-sm">Plenty of space for luggage, prams, and everything your family needs for a stress-free trip.</p>
           </div>
         </div>
       </div>
@@ -258,67 +255,27 @@
   <!-- BOOKING -->
   <section id="booking" class="py-16">
     <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-      <h2 class="text-2xl font-bold mb-4 text-center lg:text-left">Book your transfer</h2>
+      <h2 class="text-2xl font-bold mb-4 text-center lg:text-left">Book Your Family Transfer 📝</h2>
       <form id="bookingForm" class="bg-white p-6 rounded-lg shadow">
         <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-          <label class="block">
-            <span class="sr-only">Full name</span>
-            <input required name="name" placeholder="Full name" class="p-3 border rounded w-full" />
-          </label>
-          <label class="block">
-            <span class="sr-only">Contact phone</span>
-            <input required type="tel" name="phone" pattern="^\+?[0-9\s-]{7,15}$" placeholder="Contact phone" class="p-3 border rounded w-full" />
-          </label>
-          <label class="block md:col-span-2">
-            <span class="sr-only">Pickup address / Airport</span>
-            <input required name="pickup" placeholder="Pickup address / Airport" class="p-3 border rounded w-full" />
-          </label>
-          <label class="block md:col-span-2">
-            <span class="sr-only">Drop-off address / Hotel</span>
-            <input required name="dropoff" placeholder="Drop-off address / Hotel" class="p-3 border rounded w-full" />
-          </label>
-          <label class="relative">
-            <span class="sr-only">Pickup date</span>
-            <input required type="date" name="date" class="p-3 pl-10 border rounded w-full" />
-            <span class="absolute left-3 top-1/2 -translate-y-1/2 text-gray-400">📅</span>
-          </label>
-          <label class="relative">
-            <span class="sr-only">Pickup time</span>
-            <input required type="time" name="time" class="p-3 pl-10 border rounded w-full" />
-            <span class="absolute left-3 top-1/2 -translate-y-1/2 text-gray-400">⏰</span>
-          </label>
-          <label class="block">
-            <span class="sr-only">Passengers</span>
-            <input required type="number" min="1" max="8" name="passengers" placeholder="Passengers (1–8)" class="p-3 border rounded w-full" />
-          </label>
-          <label class="block">
-            <span class="sr-only">Return trip?</span>
-            <select name="returnTrip" id="returnTrip" required class="p-3 border rounded w-full">
-              <option value="">Return trip?</option>
-              <option value="One-way">No (One-way)</option>
-              <option value="Return">Yes (Return Trip)</option>
-            </select>
-          </label>
+          <input required name="name" placeholder="Full name" class="p-3 border rounded w-full" />
+          <input required type="tel" name="phone" pattern="^\+?[0-9\s-]{7,15}$" placeholder="Contact phone" class="p-3 border rounded w-full" />
+          <input required name="pickup" placeholder="Pickup address / Airport" class="p-3 border rounded w-full md:col-span-2" />
+          <input required name="dropoff" placeholder="Drop-off address / Hotel" class="p-3 border rounded w-full md:col-span-2" />
+          <input required type="date" name="date" class="p-3 border rounded w-full" />
+          <input required type="time" name="time" class="p-3 border rounded w-full" />
+          <input required type="number" min="1" max="8" name="passengers" placeholder="Passengers (1–8)" class="p-3 border rounded w-full" />
+          <select name="returnTrip" id="returnTrip" required class="p-3 border rounded w-full">
+            <option value="">Return trip?</option>
+            <option value="One-way">No (One-way)</option>
+            <option value="Return">Yes (Return Trip)</option>
+          </select>
           <div id="returnFields" class="hidden md:col-span-2 grid grid-cols-1 md:grid-cols-2 gap-4">
-            <label class="relative">
-              <span class="sr-only">Return date</span>
-              <input type="date" name="returnDate" id="returnDate" class="p-3 pl-10 border rounded w-full" />
-              <span class="absolute left-3 top-1/2 -translate-y-1/2 text-gray-400">📅</span>
-            </label>
-            <label class="relative">
-              <span class="sr-only">Return time</span>
-              <input type="time" name="returnTime" id="returnTime" class="p-3 pl-10 border rounded w-full" />
-              <span class="absolute left-3 top-1/2 -translate-y-1/2 text-gray-400">⏰</span>
-            </label>
+            <input type="date" name="returnDate" id="returnDate" class="p-3 border rounded w-full" />
+            <input type="time" name="returnTime" id="returnTime" class="p-3 border rounded w-full" />
           </div>
-          <label class="block md:col-span-2">
-            <span class="sr-only">Flight number</span>
-            <input name="flight" placeholder="Flight number (optional)" class="p-3 border rounded w-full" />
-          </label>
-          <label class="block md:col-span-2">
-            <span class="sr-only">Additional notes</span>
-            <textarea name="notes" placeholder="Additional notes (optional)" class="p-3 border rounded w-full" rows="3"></textarea>
-          </label>
+          <input name="flight" placeholder="Flight number (optional)" class="p-3 border rounded w-full md:col-span-2" />
+          <textarea name="notes" placeholder="Additional notes (child seats, luggage, etc.)" class="p-3 border rounded w-full md:col-span-2" rows="3"></textarea>
         </div>
         <div class="mt-4">
           <div class="g-recaptcha" data-sitekey="YOUR_SITE_KEY"></div>
@@ -334,23 +291,23 @@
   <!-- FAQ -->
   <section id="faq" class="py-16 bg-gray-50">
     <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-      <h2 class="text-3xl font-bold text-center mb-10">Frequently Asked Questions</h2>
+      <h2 class="text-3xl font-bold text-center mb-10">FAQs for Families & Groups ❓</h2>
       <div class="space-y-6">
         <div class="bg-white p-5 rounded-lg shadow">
-          <h3 class="font-semibold text-lg mb-2">How much is a Warrington to Manchester Airport transfer?</h3>
-          <p class="text-gray-600">Prices vary depending on passenger numbers, but transfers from Warrington to Manchester Airport typically start from around £45–£60.</p>
+          <h3 class="font-semibold text-lg mb-2">Do you provide child seats?</h3>
+          <p class="text-gray-600">Yes — we offer child seats and boosters free of charge. Please request when booking so we can prepare them for your journey.</p>
         </div>
         <div class="bg-white p-5 rounded-lg shadow">
-          <h3 class="font-semibold text-lg mb-2">Do you cover Liverpool Airport as well?</h3>
-          <p class="text-gray-600">Yes — we provide reliable transfers to and from Liverpool John Lennon Airport as well as Manchester Airport and other UK airports.</p>
+          <h3 class="font-semibold text-lg mb-2">How much is a Warrington to Manchester Airport transfer?</h3>
+          <p class="text-gray-600">Prices vary depending on passenger numbers, but transfers typically start from around £45–£60.</p>
+        </div>
+        <div class="bg-white p-5 rounded-lg shadow">
+          <h3 class="font-semibold text-lg mb-2">Do you cover Liverpool Airport too?</h3>
+          <p class="text-gray-600">Yes — we regularly serve Liverpool John Lennon Airport as well as Manchester Airport and other UK airports.</p>
         </div>
         <div class="bg-white p-5 rounded-lg shadow">
           <h3 class="font-semibold text-lg mb-2">Can I book a return trip?</h3>
-          <p class="text-gray-600">Absolutely. You can book a one-way or a return transfer directly using our booking form or via WhatsApp/Email.</p>
-        </div>
-        <div class="bg-white p-5 rounded-lg shadow">
-          <h3 class="font-semibold text-lg mb-2">Do you monitor flights?</h3>
-          <p class="text-gray-600">Yes — our drivers track live flight information to ensure on-time pickups, even if your flight is delayed.</p>
+          <p class="text-gray-600">Absolutely — one-way or return transfers are both available. We’ll track your flight to make sure we’re there, even if your plane is delayed.</p>
         </div>
       </div>
     </div>
@@ -359,8 +316,8 @@
   <!-- CONTACT -->
   <section id="contact" class="py-16 bg-white">
     <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-      <h2 class="text-3xl font-bold mb-6">Contact Us</h2>
-      <p class="text-gray-600 mb-4">Have questions? Get in touch with us directly.</p>
+      <h2 class="text-3xl font-bold mb-6">Contact Us 📞</h2>
+      <p class="text-gray-600 mb-4">We’re here to make your journey easy and stress-free. Get in touch anytime.</p>
       <p class="text-gray-700"><strong>Email:</strong> bookings@aeroride.com</p>
       <p class="text-gray-700"><strong>Phone:</strong> +44 7594 261537</p>
     </div>
