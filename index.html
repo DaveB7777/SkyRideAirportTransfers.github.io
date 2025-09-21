@@ -354,11 +354,23 @@
   </section>
 
   <!-- FOOTER -->
-<footer class="bg-white border-t py-6 text-center text-sm text-gray-600">
-  © <span id="year"></span> AeroRide. All rights reserved. |
-  <a href="privacy.html" class="text-blue-700 hover:underline">Privacy Policy</a> |
-  <a href="terms.html" class="text-blue-700 hover:underline">Terms &amp; Conditions</a>
-</footer>
+  <footer class="bg-white border-t py-6 text-center text-sm text-gray-600">
+    © <span id="year"></span> AeroRide. All rights reserved. |
+    <a href="privacy.html" class="text-blue-700 hover:underline">Privacy Policy</a> |
+    <a href="terms.html" class="text-blue-700 hover:underline">Terms &amp; Conditions</a>
+  </footer>
+
+  <!-- ✅ Cookie Consent Banner -->
+  <div id="cookie-banner" class="fixed bottom-0 left-0 right-0 bg-gray-900 text-white p-4 flex flex-col md:flex-row items-center justify-between z-50 hidden">
+    <p class="text-sm mb-2 md:mb-0">
+      We use cookies (including Google reCAPTCHA) to ensure the best experience on our website. 
+      See our <a href="privacy.html" class="underline text-blue-300 hover:text-blue-400">Privacy Policy</a>.
+    </p>
+    <div class="flex gap-2">
+      <button id="cookie-accept" class="bg-green-600 hover:bg-green-700 text-white px-4 py-2 rounded text-sm">Accept</button>
+      <button id="cookie-decline" class="bg-gray-600 hover:bg-gray-700 text-white px-4 py-2 rounded text-sm">Decline</button>
+    </div>
+  </div>
 
   <!-- ✅ reCAPTCHA -->
   <script src="https://www.google.com/recaptcha/api.js" async defer></script>
@@ -410,7 +422,7 @@
     const validateForm = () => {
       const form = Object.fromEntries(new FormData(bookingForm).entries());
       if (!form.name || form.name.length < 2) { alert("Please enter your full name."); return false; }
-      if (!form.phone.match(/^[+0-9\s-]{7,15}$/)) { alert("Please enter a valid phone number."); return false; }
+      if (!form.phone.match(/^[+0-9\\s-]{7,15}$/)) { alert("Please enter a valid phone number."); return false; }
       if (!form.pickup || !form.dropoff) { alert("Pickup and dropoff are required."); return false; }
       if (!form.date || !form.time) { alert("Please select a valid date and time."); return false; }
       if (form.passengers < 1 || form.passengers > 8) { alert("Please enter passengers (1–8)."); return false; }
@@ -455,10 +467,26 @@
     const today = new Date().toISOString().split("T")[0];
     document.querySelector('input[name="date"]').setAttribute("min", today);
     document.getElementById("returnDate").setAttribute("min", today);
+
+    // ✅ Cookie banner logic
+    const banner = document.getElementById("cookie-banner");
+    const acceptBtn = document.getElementById("cookie-accept");
+    const declineBtn = document.getElementById("cookie-decline");
+
+    if (!localStorage.getItem("cookieConsent")) {
+      banner.classList.remove("hidden");
+    }
+
+    acceptBtn.addEventListener("click", () => {
+      localStorage.setItem("cookieConsent", "accepted");
+      banner.classList.add("hidden");
+    });
+
+    declineBtn.addEventListener("click", () => {
+      localStorage.setItem("cookieConsent", "declined");
+      banner.classList.add("hidden");
+    });
   });
   </script>
 </body>
 </html>
-
-
-
