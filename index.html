@@ -216,6 +216,44 @@
     }
   }
   </script>
+  
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "TaxiService",
+  "name": "AeroRide",
+  "url": "https://www.aeroride.com",
+  "aggregateRating": {
+    "@type": "AggregateRating",
+    "ratingValue": "5",
+    "reviewCount": "3"
+  },
+  "review": [
+    {
+      "@type": "Review",
+      "author": { "@type": "Person", "name": "Sarah W." },
+      "datePublished": "2024-09-15",
+      "reviewBody": "Fantastic service! The driver was early, car was spotless, and the trip to Manchester Airport was stress-free.",
+      "reviewRating": { "@type": "Rating", "ratingValue": "5", "bestRating": "5" }
+    },
+    {
+      "@type": "Review",
+      "author": { "@type": "Person", "name": "James R." },
+      "datePublished": "2024-10-01",
+      "reviewBody": "Professional and reliable. We booked a return trip to Liverpool Airport for 6 people and it was perfect.",
+      "reviewRating": { "@type": "Rating", "ratingValue": "5", "bestRating": "5" }
+    },
+    {
+      "@type": "Review",
+      "author": { "@type": "Person", "name": "Emma T." },
+      "datePublished": "2024-11-05",
+      "reviewBody": "Highly recommended. Easy booking via WhatsApp and great communication throughout.",
+      "reviewRating": { "@type": "Rating", "ratingValue": "5", "bestRating": "5" }
+    }
+  ]
+}
+</script>
+
 </head>
 <body class="min-h-screen font-sans text-gray-800 bg-gray-50">
 
@@ -431,6 +469,50 @@
       </div>
     </div>
   </section>
+  
+  <!-- REVIEWS -->
+<section id="reviews" class="py-16 bg-white">
+  <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+    <h2 class="text-3xl font-bold text-center mb-10">What Our Customers Say</h2>
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+      
+      <!-- Review 1 -->
+      <div class="bg-gray-50 p-6 rounded-lg shadow text-center">
+        <div class="flex justify-center mb-3 text-yellow-400">
+          ★★★★★
+        </div>
+        <p class="text-gray-700 italic mb-4">
+          "Fantastic service! The driver was early, car was spotless, and the trip to Manchester Airport was stress-free."
+        </p>
+        <p class="font-semibold text-gray-900">– Sarah W.</p>
+      </div>
+      
+      <!-- Review 2 -->
+      <div class="bg-gray-50 p-6 rounded-lg shadow text-center">
+        <div class="flex justify-center mb-3 text-yellow-400">
+          ★★★★★
+        </div>
+        <p class="text-gray-700 italic mb-4">
+          "Professional and reliable. We booked a return trip to Liverpool Airport for 6 people and it was perfect."
+        </p>
+        <p class="font-semibold text-gray-900">– James R.</p>
+      </div>
+      
+      <!-- Review 3 -->
+      <div class="bg-gray-50 p-6 rounded-lg shadow text-center">
+        <div class="flex justify-center mb-3 text-yellow-400">
+          ★★★★★
+        </div>
+        <p class="text-gray-700 italic mb-4">
+          "Highly recommended. Easy booking via WhatsApp and great communication throughout."
+        </p>
+        <p class="font-semibold text-gray-900">– Emma T.</p>
+      </div>
+      
+    </div>
+  </div>
+</section>
+
 
   <!-- CONTACT -->
   <section id="contact" class="py-16 bg-white">
